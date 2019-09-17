@@ -1,0 +1,37 @@
+\fancychapter{Introduction}
+\label{chap:intro}
+
+Autonomous agents are increasingly becoming part of our society and their presence has been proven to impact our lives. But do any of us remember a remarkable interaction with a robot to the same degree we are able to recall one with a person? What makes one conversation memorable? This common feeling of flow and connection we have during conversations is formally known as rapport~\cite{Wang2009}. An agent design able to realistically manage rapport is a puzzle yet to be solved.
+
+In order to answer these questions, the \ac{HRI} research community has been exploring agents capable of responding emotionally and more socially in dyadic interactions. More specifically, researchers have been investigating how to design social agents that exhibit signs of rapport. In fact, according to the current literature, these rapport agents are likelier to bring forth more positive emotions from people, making them feel more connected~\cite{Rosenthal-vonderPutten2013, Tsai2012}, less tense~\cite{Wang2010}, less embarrassed~\cite{Kang2009}, and even more prone to trust the agent~\cite{Kang2009}.
+
+In order to build rapport, agents (and people) have to consider three important aspects during interactions: positivity (or friendliness), mutual attention, and coordination~\cite{Spencer-Oatey2005}. Positivity aims to bring forth more positive emotions during interactions, for example, smiling and humour. Mutual attention aims to show that we are attentive to what the another person is saying by, for example, nod slightly the head at the end of an idea (backchannel) and looking at the person attentively (mutual-gaze). Finally, coordination is shown by, for example, mimic the person's posture either smile at back at them or even coordinating a simple handshake. Rapport is only built when these aspects are working in unison. In reality, most of the today's agents do not formally consider this concept, and yet, they have been impacting people's lives on several scenarios such as education~\cite{Burroughs2007}, child care~\cite{Burns1984}, medical assistance~\cite{Marti2006, Kang2005, Lisetti2013}, family companions~\cite{Bickmore2005}, and weight loss~\cite{Fasola2012}. How well would these agents perform if they could manage rapport with the users?
+
+Only recently researchers have been developing agents that attempt to build rapport with users, but their research is more focused on individual aspects of rapport, such as gaze~\cite{Skantze2013, Andrist2015, Mutlu2006, Stanton2014, Peters2005, Andrist2014, Baxter2014, Wang2010} (for mutual attention), and backchannel~\cite{Truong2011, Morency2008, Huang2010, Poppe2011, Poppe2010, Kok2012, Niewiadomski2009} (for mutual attention and coordination) which individually are not sufficient to build rapport. The agents that build rapport following its three components are virtual~\cite{Buschmeier2011, Gratch2006}, there are no similar robotic agents. Most of all, researchers are attempting to refine current computational models for autonomous agents to produce more natural behaviours, in such a way that makes us question if the agent is being remotely controlled. 
+
+This dissertation tackles the lack of robotic agents in the research community that are able to build rapport using its three components: positivity, mutual attention, and coordination~\cite{Spencer-Oatey2005}. For this purpose, inspired by the recent development of computation models to build rapport and social agents, we intend to build the foundations to create robotic agents capable of showing signs of rapport. More importantly, the dissertation aims to provide researchers with the required tools to start developing more natural agents that systematically attempt to build rapport using strategies tailored to the user's characteristics and the environment.
+
+\section{Goals}
+\label{sec:goals}
+
+The main goals of this dissertation are to:
+\begin{itemize}
+	\item Design a rapport model capable of eliciting the three components of rapport. The model should provide flexibility so it can be implemented on either robotic or virtual agents, and on any \ac{HRI} scenarios;
+	\item Develop a framework that implements the rapport model. The framework should provide to technical and non-technical researchers, the required tools to customise the model towards their goals;
+	\item Study the impact of the rapport model on users using a robotic embodiment;
+\end{itemize}
+
+\section*{\centering *}
+
+The following chapter presents a detailed explanation of the concept of rapport, helping the reader to understand its notion. The document proceeds with the state-of-art of computational models of rapport and the description of virtual agents that are capable, to some extent, of managing rapport. The rapport model is detailed in Chapter~\ref{chap:rapportModel}, which is followed by its implementation in Chapter~\ref{chap:proposedapproach}. The novel scenario and the conducted user studies are described in Chapter~\ref{chap:userstudies}. Finally, the document presents the conclusions, contributions and future work in Chapter~\ref{chap:conclusions}.
+
+
+
+%In the research community there are many frameworks and tools for modelling virtual agents. These framework aims to ease the development process of creating virtual agents capable of engaging with humans that requires the integration of several capabilities in unison, ranging from perceptual capabilities to planning and producing behaviours, while maintaining a decoupled system, typically using a message oriented systems~\cite{ROS, Thalamus}. 
+
+%On the other hand, there are relevant example frameworks such as SEMAINE [50]Virtual Human Toolkit (VHT) [51], ASAP [52], Robot Operating System (ROS) cite and Robot Behaviour Toolkit.
+%The SEMAINE project [50] aims to integrate various research technologies to creating a virtual listener emphasising on perception and back-channeling capabilities rather than deep representations of dialogue VHT is a framework more focused on developing virtual agents with deep conversational capabilities (Natural Language Processing (NLP) processing [?] and dialogue management), which despite being relevant it is not part of the concerns we want to address in our proposal. The framework also possess tools for analysing low-level descriptions of interaction, such as facial expression and Rapport - Establishing harmonious relationship between robots and humans 17 acoustic features, and more high-level descriptions such as fidgeting. It also contains a rule-based [?] behavioural planner and a behaviour realisation component [53] that generates suitable animation sequences while synchronising with the agent’s produced utterances.
+
+
+
+%\ac{SERA} framework~\cite{Tullio2015} aims to ease the development of embodied agents on \ac{HRI} scenarios. However, the framework is not sufficiently expressive to build richer agents that are capable of interrupting and replacing their course of actions, which is essential to build rapport agents~\cite{Reidsma2011, Visser2014, Kopp2007, Zwiers2011}.

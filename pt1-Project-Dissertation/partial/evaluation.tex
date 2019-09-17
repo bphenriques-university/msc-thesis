@@ -1,0 +1,81 @@
+\section{Evaluation}
+\label{sec:Evaluation}
+The current section will describe the methodology that will be used in order to evaluate the correctness and benefits of the proposed solution. 
+
+The proposed solution aims to improve current backchannels models and test the developed model on a robotic rapport agent. Robot \ac{EMYS} will be used due to its expressiveness, and the negotiation scenario will be simplified version of Split Or Steal~\cite{VandenAssem2012}, due to its simplicity and because it was previously integrated in the \ac{SERA} framework. Split Or Steal requires two players that will discuss how a large amount of money will be shared among the players. After a brief initial discussion, each player will have to choose one of two spheres that will decide the outcome of the game: \textit{Split} or \textit{Steal} (Table~\ref{fig:splitOrSteal}).
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{Player1/Player2} & 
+		\textbf{\textit{Steal}} & \textbf{\textit{Split}} \\ \hline
+		\textbf{\textit{Steal}} & $0,0$ & $2,0$		\\ \hline
+		\textbf{\textit{Split}} & $0,2$ & $1,1$      \\ \hline
+	\end{tabular}
+	\caption{Split Or Steal payoff matrix. Both players lose the money if they both decide to \textit{Steal} and the money is divided in half if both players decide to \textit{Split}. The remaining options leads to the \textit{Steal} player keeping all the money.}
+	\label{fig:splitOrSteal}
+\end{table}
+
+\vspace{-8mm}
+
+The evaluation of the proposed solution must into three main issues:
+\begin{itemize}
+	\item Correctiveness of the generation of backchannel behaviour;
+	\item User preference of the trained system over the untrained version (rule-based);
+	\item Assess the impact of rapport in cooperation in negotiation scenarios.
+\end{itemize}
+
+We will investigate previous literature to assess what are the most important features and interactional rules in these types of games. With this knowledge we will define what are the set of actions and perceptual capabilities that \ac{EMYS} should have to be successful in building rapport, and define the initial version of the system, $M_0$, solely rule-based and and stripped of previous knowledge. The baseline for evaluation will be a lighter version of $M_0$ that tries to balance when and how to generate backchannels without the eagerness to generate more backchannels in order to have more corrective feedback.
+
+The evaluation process will focus on studying how version $M_n$ represents an improvement over previous version $M_{n-1}$. Human subjects (at least 30 from the university to ensure statistical viability) will interact with the version $M_n$ of the rapport agent (with $n={1,2,...,n}$) while human experts (from the research group) provide corrective feedback. After each session, each person will answer a questionnaire in order to evaluate their individual experience. This questionnaire aims to measure the users perception of rapport on the embodied agent using:
+
+\begin{itemize}
+	\item Adapted version of \acf{IRI}~\cite{Davis1980};
+	\item Godspeed series~\cite{Bartneck2009};
+	\item Five-item social presence scale~\cite{Bailenson2001};
+	\item Engagement using task specific questionnaire.
+\end{itemize}
+
+The inter-rated agreement between the human experts will be measured using Cohen’s kappa coefficient (Equation~\ref{eq:CohenKappa}) and the the trained models will be objectively measured for precision (Equation~\ref{eqn:precision}) and recall (Equation~\ref{eqn:Recall}). The initial \ac{RL} values (Equation~\ref{eq:QLearning}): learning rate $\alpha$, discount value $\gamma$, and the initial reward function $R(s_t,a_t,s_{t+1})$ will be studied to verify which combination leads to better results (Section~\ref{subsec:ReinforcementLearning}).
+
+Lastly, we expect the last version of the system, $M_n$ to be able to build rapport, provide better backchannel feedback and elicit more cooperation from the users in the negotiation scenario.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% RAW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%According to previous studies [33 dont stare at me], during dyadic interactions, the listener usually maintains long gazes at the speaker and only interrupts briefly from time to time. 
+
+%In fact, [9 toward dyadic...] found that in a negotiation setting not reciprocating negative self-disclosure led to decreased feelings of rapport.  \cite{Bronstein2012} 
+
+%mutual gaze in determine turn-taking turn-taking [8] [12] [14] [56] [47] [vêm do dont stare at me]. 
+
+%One of the most notable non-verbal behaviors to build rapport is gaze because it is a clear signal of mutual attention, acts as an invitation to interaction, increases dynamism, likelability and believability [4 do dont stare at me]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%5 dont stare at me %%%%%%
+%its impact in a wide range of interpersonal domains includ- ing social engagement [52], classroom learning [22], suc- cess in negotiations [20], improving worker compliance [18], psychotherapeutic effectiveness [59], and improved quality of child care [11].
+
+%Gaze as object of interest [8] [37] [55]. , effects on the way communication proceeds [54] [60] [23] [19] [28].
+
+%\item Head gestures; %[7 do virtual rapport 2.0] refere q aumenta persuacao
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% POTENTIAL RAPPORT RULES
+%%%%%%%%%%%%%%%%%%%
+% dint stare at me
+%In fact, previous work demonstrated that there is evidence that in health domains, high rapport doctors engaged in less extensive eye-contact than low rapport doctors  , 85\% and 70\% of the interaction time respectively . However, the impact of the gaze depends if the interacts are in a helping context (e.g. meetings with a doctor) or in a non-helping context (e.g. interviewing)  [dont stare at me].  On the latter, directed gaze is correlated positively with participant’s evaluative impression [ Tickle-Degnan and Rosenthal]. In interviweing ocntexts, Goldberg, Kiesler, and Collins [25] found that people who spent more time gazing at an interviewer received higher socio- emotional evaluations. 
+
+%Argyle [1] found that in dyadic conversa- tions, the listener spent an average of about 75% of the time gazing at the speaker.
+
+%Kendon [33] reported that a typical pattern of interaction when two people converse with each other consists of the listener maintaining fairly long gazes at the speaker, interrupted only by short glances away.
+
+%In short, gaze can also have negative impact if not dosed correctly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%

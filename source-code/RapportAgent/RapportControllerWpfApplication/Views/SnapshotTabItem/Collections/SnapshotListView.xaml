@@ -1,0 +1,27 @@
+﻿<DataGrid x:Class="RapportControllerWpfApplication.Views.Collections.SnapshotListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportControllerWpfApplication.Views.Collections"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             RowHeight="40" SelectionMode="Single" LoadingRow="DataGrid_LoadingRow"
+            CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*"
+            CellStyle="{StaticResource Body_Content_DataGrid_Centering}" HeadersVisibility="Column"
+            VirtualizingStackPanel.VirtualizationMode="Recycling"
+            GridLinesVisibility="Horizontal" AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTemplateColumn Width="Auto" CanUserResize="False" CanUserReorder="False">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Name="ExecuteSnapshotButton" Style="{StaticResource TransparentOnOverButton}" Width="16" Height="16" Margin="5,0,0,0" Click="ExecuteSnapshotButton_Click">
+                            <Rectangle Width="16" Height="16" Fill="{StaticResource RunIcon}"/>
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn SortDirection="Descending" Width="50" FontWeight="Bold" Header="Id" Binding="{Binding Id}" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Width="*" Header="TimeStamp" Binding="{Binding Path=TimeStamp, StringFormat=\{0:HH:mm:ss.fff\}}" IsReadOnly="True" CanUserReorder="False" CanUserResize="False" />
+        </DataGrid.Columns>
+    </DataGrid>

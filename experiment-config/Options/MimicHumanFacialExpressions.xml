@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<MimicFacialExpressionsSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MinimumDelayMsBetweenActions>3500</MinimumDelayMsBetweenActions>
+  <DebugMessages>false</DebugMessages>
+  <Happy>
+    <TriggerProbability>0.48</TriggerProbability>
+    <MinimumIntensity>0.65</MinimumIntensity>
+    <Priority>1</Priority>
+    <BaseAnimation>joy</BaseAnimation>
+  </Happy>
+  <Sad>
+    <TriggerProbability>0.48</TriggerProbability>
+    <MinimumIntensity>0.65</MinimumIntensity>
+    <Priority>1</Priority>
+    <BaseAnimation>sadness</BaseAnimation>
+  </Sad>
+  <Surprised>
+    <TriggerProbability>0.48</TriggerProbability>
+    <MinimumIntensity>0.5</MinimumIntensity>
+    <Priority>1</Priority>
+    <BaseAnimation>surprise</BaseAnimation>
+  </Surprised>
+</MimicFacialExpressionsSettings>

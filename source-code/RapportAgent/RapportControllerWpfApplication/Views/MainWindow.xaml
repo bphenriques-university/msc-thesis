@@ -1,0 +1,23 @@
+﻿<Window x:Class="RapportControllerWpfApplication.MainWindow"
+        x:Name="RapportControllerWpfGUI"        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:local="clr-namespace:RapportControllerWpfApplication"
+        xmlns:views="clr-namespace:RapportControllerWpfApplication.Views"
+        xmlns:console="clr-namespace:RapportControllerWpfApplication.Views.ConsoleTabItem"
+        mc:Ignorable="d"
+        Title="Rapport Controller" Height="437.284" Width="948.136" 
+        Loaded="RapportControllerWpfGUI_Loaded"
+        Closing="RapportControllerWpfGUI_Closing"
+        Icon="/RapportControllerApp;component/Resources/1464028754_Robot_18.ico">
+    <Grid>
+        <TabControl x:Name="tabControl" Margin="10,10,10,35">
+            <views:PluginsListTabItem />
+            <views:SnapshotListTabItem />
+            <console:ConsoleTabItem />
+        </TabControl>
+        <views:StatusStrip />
+    </Grid>
+</Window>

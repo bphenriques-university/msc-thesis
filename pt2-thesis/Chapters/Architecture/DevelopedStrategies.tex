@@ -1,0 +1,28 @@
+\section{Rapport \textit{Effectors} Implementation}
+\label{sec:rapportStrategies}
+
+The following section describes the most relevant implementation details of the rapport \textit{Effectors} of the model detailed in Chapter~\ref{chap:rapportModel}. As denoted in Sections~\ref{sub:model_positivity}, \ref{sub:model_Coordination}, and \ref{sec:mutual_attentionModel}, the rapport strategies have to be parametrisable, so that researchers may adapt the model to any agent embodiment or \ac{HRI} scenario. 
+
+The Positivity rapport \textit{Effector} (that satisfies the ``Stimulate positivity'' goal) and the ``Adhere to Social Norms'' goal are implemented by triggering utterances given the perceptual information of the scenario. Finally, The \textit{Effectors} were implemented and tested using robot \ac{EMYS} (Figure~\ref{fig:robots:EMYS2}).
+
+
+%TODO referir que a positivity e o adhere to social norms são implementados scenario based
+
+%In the following sections we will describe the supporting technologies, \ac{SSI}~\cite{Wagner2013}, SHORE~\cite{Ruf2011}, and GRETA~\cite{Niewiadomski2009} in Section~\ref{sec:supportingTechnologies}, followed by a brief description of the \textit{Effectors} described above.
+
+%Most of all, in order to build rapport more effectively, one should take into consideration if the above-mentioned strategies fit the study scenario, and if they are adequate to the person the agent is interacting with (e.g., introvert and extrovert people should be handled differently~\cite{Andrist2015}). This aspect is more relevant for enhancing positivity which is mostly built either through vocal interactions or through gestures. For this purpose, in order to build positivity, the developer must build their own \textit{Effector} or \textit{Effectors}.
+
+
+
+% Bull1981, Baxter2014
+% Impact on users behaviour
+%Buschmeier2011, Zhao2014, Reidsma2011, Gratch2006, Mutlu2006, Andrist2015, Stanton2014,
+
+
+\input{Architecture/SupportingTechnologies}
+\input{Architecture/FacialExpressionMimicry}
+\input{Architecture/HeadNodMimicry}
+\input{Architecture/GazeBehaviour}
+\input{Architecture/BackchannelPlugin}
+
+

@@ -1,0 +1,36 @@
+\subsection{Mutual Gaze}
+\label{sub:sec:GazeFace}
+
+The Mutual-Gaze rapport \textit{Effector}, as described in Section~\ref{sec:mutual_attentionModel}, swaps the gaze target depending on the user's personality and on the current state of the interaction, more precisely, whenever the agent is in an in-task phase, or in a between-task phase. As we not know the personality of the user beforehand, the \textit{Effector} assumes that the interactional partner is extroverted (which has lower standard deviation than introvert following Table~\ref{table:gazetimes}). This \textit{Effector} plugin uses the rapport model's default durations parameters which are represented in Table~\ref{table:mutualGazeParametersValues}. Finally, the gaze targets identifiers depicted on the same table are known by \textit{Skene} who triggers the appropriate animations on \textit{Nutty Tracks}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Parameter}} & \textbf{Value} \\ \hline
+	\multicolumn{2}{|l|}{In-task Gaze Priority} & 1 \\ \hline
+	\multicolumn{2}{|l|}{Between-tasks Gaze Priority} & 1 \\ \hline
+	\multirow{2}{*}{In-task} & Face & 2660 \\ \cline{2-3} 
+	 & Task & 4040 \\ \hline
+	\multirow{2}{*}{Between-tasks} & Face & 3910 \\ \cline{2-3} 
+	 & Task & 1010 \\ \thickhline
+	\multicolumn{2}{|l|}{Face Gaze Target Identifier} & middleFront \\ \hline
+	\multicolumn{2}{|l|}{Task Gaze Target Identifier} & bottomFront \\ \hline
+	\end{tabular}
+	\caption{Parametrisation of the Mutual Gaze rapport \textit{Effector}.}
+	\label{table:mutualGazeParametersValues}
+\end{table}
+
+%Despite SHORE being capable of estimating accurately the gender of the user, it must be defined beforehand by the developer. 
+
+
+
+
+
+
+
+
+%table:mutualGazeParameters
+%table:backchannel
+%table:headNodMimicryParameters
+

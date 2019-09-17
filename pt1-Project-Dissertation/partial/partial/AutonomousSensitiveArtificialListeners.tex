@@ -1,0 +1,33 @@
+\subsubsection{\acl{SAL}} \hspace*{\fill} \\
+\label{subsec:AutonomousSensitiveArtificialListeners}
+
+Schröder et al. developed a virtual agent integrated in SEMAINE~\cite{Schroder2010} called \ac{SAL} that has the required capabilities to sustain conversational dialogues and be a good listener~\cite{Schroder2012}.
+
+\paragraph{\textbf{System Description}}
+
+Following the representation of the \ac{SAL} system in Figure~\ref{fig:sensitiveAgent}, the most relevant components are: \textit{Feature extractors}, \textit{Analysers}, \textit{Interpreters}, \textit{Action proposers}, and \textit{Action selection}. The \textit{Feature extractors} component extracts several features such as head gestures, facial features, emotions and, most of all, acoustic features. These features are later analysed by the \textit{Analysers} and \textit{Interpreters} components. The former component analyses non-verbal behaviours and speaker's emotions to produce an estimate of the information's reliability. The later component, given the information available, returns the best state representation for the user, dialogue and agent. Following this, several \textit{Action proposers} will propose an action, in parallel, given previous information. Following, the \textit{Action selection} component selects the action with the highest estimated quality, and lastly, the \textit{Behaviour generator} generates the desired action (utterances and facial animations).
+
+\vspace{-3mm}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/SensitiveAgent.png}
+	\caption{\acl{SAL} conceptual architecture. From~\cite{Schroder2012}.}
+	\label{fig:sensitiveAgent}
+\end{figure}
+\vspace{-7mm}
+
+The agent is capable of identifying whether it should be in listener or in speaker mode. This is relevant as the \textit{Action selection} component gives more priority over speaker's actions. An example speaker action would be  saying ``Well?'' or ``Go on, tell me your news!'' after a long pause. In addition, in listener mode, the \textit{Action selection} component chooses the most appropriate backchannel to be produced according to the emotions and interest level estimated from the user.
+
+\paragraph{\textbf{Evaluation}}
+
+The objective was to evaluate if emotion-related abilities influence the quality of human interactions. Firstly the users, with minimal \ac{HRI} experience, receive a introductory briefing on the available personalities they can interact with (4 in total). Then, they can interact twice with each available personality one with the expressive agent, the other with the affective features of the output disabled (randomly). The user interacts with the \ac{SAL} agent's presented in a computer screen (only the face is rendered), using the available cameras and microphones.
+
+\paragraph{\textbf{Discussion}}
+There is evidence that expressive abilities may substantially impact the interactions between humans and agents by denoting that flow and perceived engagement was much higher in the emotional \ac{SAL} than in the control environment. Compared with previous described systems, it is one of the most complete models for managing backchannels and turn taking strategies, however, as stated previously in Section~\ref{subsec:Rapport}, attentiveness and coordination are not enough to build rapport, it is also necessary to stimulate positivity which this system does not cover. To conclude, the most relevant aspects of the systems are:
+
+\begin{itemize}
+	\item Generate good listeners without understanding semantically what it is being said;
+	\item Parallel independent action proposers that uses both rule and \ac{ML} approaches;
+	\item Dedicated dialogue management models;
+	\item Covers several users affective states by modelling distinct characters.
+\end{itemize}

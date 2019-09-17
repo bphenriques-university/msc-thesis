@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<BackchannelSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BackchannelTriggerPriority>1</BackchannelTriggerPriority>
+  <TriggerProbability>1</TriggerProbability>
+  <MinimumIntensity>5</MinimumIntensity>
+  <MaximumIntensity>10</MaximumIntensity>
+  <MinimumRepetitions>2</MinimumRepetitions>
+  <MaximumRepetitions>2</MaximumRepetitions>
+  <MinimumFrequency>125</MinimumFrequency>
+  <MaximumFrequency>160</MaximumFrequency>
+  <DelayMsVocalization>175</DelayMsVocalization>
+  <MinimumDelayMsBetweenActions>5000</MinimumDelayMsBetweenActions>
+  <DebugMessages>false</DebugMessages>
+</BackchannelSettings>

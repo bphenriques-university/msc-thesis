@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/brunohenriques/Documents/MSc-thesis/Extended-Abstract/.texpadtmp/Rapport-Paper.aux
+The style file: abbrv.bst
+Database file #1: ../bib/sigproc.bib
+Database file #2: ../bib/questionnaires.bib
+Database file #3: ../bib/library.bib
+Warning--empty publisher in Gratch2006
+Warning--empty publisher in Buschmeier2011
+Warning--there's a number but no series in Melo2011
+Warning--there's a number but no volume in Niewiadomski2009
+Warning--empty publisher in Papangelis2014
+Warning--empty publisher in Poppe2011
+Warning--empty publisher in Zhao2014
+You've used 55 entries,
+            2118 wiz_defined-function locations,
+            856 strings with 15571 characters,
+and the built_in function-call counts, 22544 in all, are:
+= -- 2275
+> -- 1121
+< -- 31
++ -- 439
+- -- 384
+* -- 1631
+:= -- 3595
+add.period$ -- 172
+call.type$ -- 55
+change.case$ -- 357
+chr.to.int$ -- 0
+cite$ -- 62
+duplicate$ -- 866
+empty$ -- 1614
+format.name$ -- 384
+if$ -- 4785
+int.to.chr$ -- 0
+int.to.str$ -- 55
+missing$ -- 55
+newline$ -- 278
+num.names$ -- 110
+pop$ -- 347
+preamble$ -- 1
+purify$ -- 302
+quote$ -- 0
+skip$ -- 681
+stack$ -- 0
+substring$ -- 1502
+swap$ -- 284
+text.length$ -- 31
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 220
+warning$ -- 7
+while$ -- 231
+width$ -- 57
+write$ -- 612
+(There were 7 warnings)

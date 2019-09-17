@@ -1,0 +1,148 @@
+% This is "Rapport-Paper" 
+% Adapted from "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+\documentclass{sig-alternate}
+
+% PREAMBLE
+\input{content/Include}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+
+%------------------------------
+%HERE
+%\setcopyright{rightsretained}
+%\insertACM
+%------------------------------
+
+
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+% UID Metadata
+% DOI
+%\doi{10.475/123_4}
+
+% ISBN
+%\isbn{123-4567-24-567/08/06}
+
+% Conference Info
+
+%------------------------------
+%HERE
+%\conferenceinfo{HRI '17}{June 6--9, 2017, Vienna, Austria}
+%------------------------------
+
+
+%\acmPrice{\$15.00}
+
+% --- Author Metadata here ---
+%\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\input{content/Acronyms}
+
+\title{Rapport}
+\subtitle{Establishing Harmonious Relationships Between Robots and Humans}
+
+
+%\numberofauthors{5}
+\numberofauthors{1}
+\author{
+% 1st. author
+\alignauthor Bruno Henriques \\
+       \affaddr{Instituto Superior Técnico}\\
+       \affaddr{Lisbon, Portugal}\\
+       \email{bruno.p.henriques@tecnico.ulisboa.pt}
+% 2nd. author
+%\alignauthor Nuno Xu\\
+%       \affaddr{Instituto Superior Técnico}\\
+%       \affaddr{Lisbon, Portugal}\\
+%       \email{nuno.xu@tecnico.ulisboa.pt}
+%% 3rd. author
+%\alignauthor Tiago Ribeiro\\
+%       \affaddr{INESC-ID}\\
+%       \affaddr{Instituto Superior Técnico}\\
+%       \affaddr{Lisbon, Portugal}\\
+%       \email{tiago.ribeiro@gaips.inesc-id.pt}
+%\and
+%% 4th. author
+%\alignauthor Rui Prada\\
+%       \affaddr{INESC-ID}\\
+%       \affaddr{Instituto Superior Técnico}\\
+%       \affaddr{Lisbon, Portugal}\\
+%       \email{rui.prada@gaips.inesc-id.pt}
+%% 5th. author
+%\alignauthor Ana Paiva\\
+%       \affaddr{INESC-ID}\\
+%       \affaddr{Instituto Superior Técnico}\\
+%       \affaddr{Lisbon, Portugal}\\
+%       \email{Ana.Paiva@inesc-id.pt}
+}
+
+% ---------------------------------------------------------------------------------------------------------------
+\maketitle
+\input{content/Abstract}
+
+%------------------------------
+%HERE
+%\input{content/CSSXML}
+%------------------------------
+
+% --------------------------------------------------------
+%\printccsdesc
+\keywords{\ac{HRI}; Rapport; Rapport; Framework; \acf{SERA}; \acf{EMYS}}
+% --------------------------------------------------------
+\input{content/Introduction}
+\input{content/Background}
+\input{content/RelatedWork}
+\input{content/Architecture}
+\input{content/Studies}
+\input{content/Conclusions}
+
+%\end{document}  % This is where a 'short' article might terminate
+
+\input{content/Acknowledgments}
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{bib/sigproc, bib/questionnaires, bib/library}
+
+\input{content/Appendices}
+
+%\balancecolumns % GM June 2007
+\end{document}

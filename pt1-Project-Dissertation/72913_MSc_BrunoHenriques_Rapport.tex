@@ -1,0 +1,83 @@
+\documentclass[runningheads]{llncs}
+\input{partial/include}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For REVIEW
+% \linenumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fix TOC on llncs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter 
+\renewcommand*\l@author[2]{}
+\renewcommand*\l@title[2]{}
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\title{Rapport - Establishing Harmonious Relationship Between Robots and Humans}
+\titlerunning{Rapport}
+\authorrunning{Rapport}
+
+\author{Bruno Alexandre Pires Henriques\\
+	\email{bruno.p.henriques@tecnico.ulisboa.pt}
+}
+\authorrunning{Bruno Henriques}
+\institute{
+	Prof. Ana Paiva\\
+	Prof. Rui Prada\\
+	Universidade de Lisboa\\
+	Técnico Lisboa (Taguspark)\\
+	Av. Prof. Dr. Aníbal Cavaco Silva\\ Porto Salvo, Portugal\\
+	\url{http://www.tecnico.ulisboa.pt}\\
+}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+\begin{abstract}
+
+Autonomous agents are becoming our next companions. They may be able to offer physical therapy assistance, play games and even help us treat weight loss. However, it is not enough to build agents that are socially engaging and attractive at first, they need to continuously convey such feelings and encourage user interactions, i.e., to build and maintain rapport over long periods of time. In this work, we propose a novel approach for learning subconscious behaviours from humans based on limited-perception \acl{WoZ} with human experts to provide corrective feedback in order to create a generic ``rapport'' model for an autonomous agent. The proposed method will be incorporated, trained, and tested on a robotic rapport agent, \acs{EMYS}, set up in a negotiation scenario, the Split Or Steal game. Following current literature on rapport and \acs{HRI}, we propose a hybrid architecture that combines both rule-based and \acl{ML} based components. On the first component we model high-level behavioural rules that are easier to specify, and on the second component, we use \acl{RL} techniques to generate correct backchannels (listener behaviours) that would be harder to specify otherwise. Lastly, we will evaluate the effectiveness of the proposed approach on learning subconscious behaviour, the quality of the rapport agent, and the impact of rapport on cooperation in the negotiation scenario.
+
+\keywords{Rapport, Backchannel, \acl{RL}, \acl{ML}, \acl{HRI}, \acs{SERA}, \acl{WoZ}, \acs{EMYS}}
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of content
+\newpage
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{partial/introduction}
+\input{partial/Background}
+\input{partial/RelatedWork}
+\input{partial/Solution}
+\input{partial/evaluation}
+\input{partial/Conclusion}
+%\input{partial/acks}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+\bibliographystyle{splncs}
+\bibliography{bib/IEEEabrv, bib/Bibliografia, bib/BibliografiaOther}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{partial/Acronyms.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices
+\newpage
+\appendix
+\input{partial/appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

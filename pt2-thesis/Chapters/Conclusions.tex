@@ -1,0 +1,45 @@
+\fancychapter{Conclusions}
+\label{chap:conclusions}
+
+This dissertation addresses the development of a rapport model that enables robotic and virtual agents to show natural signs of rapport according to the dyadic state of the interaction. This work was inspired by current literature on rapport~\cite{Buschmeier2011, Spencer-Oatey2005, Zhao2014, Papangelis2014} and social agents~\cite{Zwiers2011, Reidsma2011, Riek2009, Niewiadomski2009, Andrist2014, Andrist2015, Cassell2007, Wang2009, Schroder2010, Buschmeier2011, Tullio2015}.
+
+The main difficulties during the development of this dissertation were:
+\begin{itemize}
+	\item Gathering and organising current research on rapport and social agents onto a consistent computational model;
+	\item Developing the framework that implements rapport model while maintaining compatibility with current \ac{SERA} agents;
+	\item Integration of \ac{SSI}, SHORE, and GRETA with the developed framework;
+	\item Designing the tools to assure that current researchers may start using the developed system.
+\end{itemize}
+
+The model is based on the development of decoupled rapport strategies that can be refined and customised individually, to any agent and \ac{HRI} scenario. The model was integrated using the \ac{SERA} ecosystem and tested using robot \ac{EMYS}, however, we had to create a framework within \ac{SERA} to support interruption and replacement of the agent's ongoing actions as required in the rapport model. The goal of the framework is to provide technical and non-technical researchers, the tools to design agents capable of showing signs of rapport. Several efforts were made so that the system maintained compatibility with \ac{SERA}, be customisable, and work with external tools such as \ac{SSI}, SHORE and GRETA thanks to the collaboration of Fraunhofer Institute for Integrated Circuits (IIS) and TELECOM ParisTech university. In fact, current \ac{SERA} agents can use the developed rapport model with low effort.
+
+To conclude, there were no relevant conclusions from the Quick Numbers user studies regarding likeability, perceived intelligence, liveness and proximity. However, from the video footage, it was clear that participants had more positive reactions on the rapport condition than on the control condition. For this purpose, it is possible to retrieve additional behavioural metrics from the recorded video (total 1235 minutes) to analyse, for example, smile frequency and length of eye contact. In addition, from the histograms, despite the lack of statistically significant results on the obtained results, there is a clear pattern that rapport strategies can make the agents more likeable as intended, which may be confirmed by repeating the studies with a sample greater than 20.
+
+
+
+
+%TODO escarrapachar as dificuldades?
+
+\section{Contributions}
+\label{sec:contributions}
+
+This dissertation contributed to:
+\begin{itemize}
+    \item Design of a rapport model that enables robotic and virtual agents to show natural signs of rapport according to the dyadic state of the interaction;
+    \item Construction of a framework that implements the rapport model and eases the development of rapport agents by technical and non-technical researchers;
+    \item Integration of \ac{SSI}, SHORE and SEMAINE with the \ac{SERA} ecosystem using the developed framework as intermediary;
+    \item Development of a novel scenario called Quick Numbers, to evaluate rapport and trust;
+    \item User studies that evaluate a rapport agent using robot \ac{EMYS} regarding participant perception of likeability, animacy, intelligence and felt proximity.
+\end{itemize}
+
+\section{Future Work}
+
+This section presents several ideas that can be implemented in the future, to improve the work developed so far.
+
+First of all, we need to evaluate the system on a different scenario focused on rapport, not on trust with a greater sample. This would aim to shift the participant's focus from the game to the agents, which has impacted the reported results in this document. In addition, we should look into behavioural metrics such as eye contact and smile frequency.
+
+Secondly, future versions of the rapport model should consider mechanisms to assess rapport success so that the agent might adapt his behaviours to the user and even recover from mistakes~\cite{Kahn2008}. For example, use SHORE to monitor the emotional state of the user and attempt use humour to cheer him as soon as sadness becomes the most average emotion. In addition, we should continue collaboration with Fraunhofer Institute for Integrated Circuits (IIS) so that we can continuously improve the rapport model and the system using the SHORE's perceptual capabilities. For example, estimate the user gender to automatically select the most appropriate set of utterances.
+
+Thirdly, we should explore resumable actions, that is, explore agents capable of resuming their course of action after being interrupted by external stimuli.
+
+Finally, the backchannel \textit{Effector} should be revisited as it is only lacking an improved noise suppressing mechanism. This plugin has the potential to greatly enhance mutual attention and coordination that are two of the three components of rapport. Looking ahead, this \textit{Effector} should explore current \ac{ML} models to generate listener behaviour, as the current literature suggests that data models are the key to generating more humanly social behaviours.

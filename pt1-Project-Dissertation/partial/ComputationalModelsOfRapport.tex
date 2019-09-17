@@ -1,0 +1,28 @@
+\subsection{Theoretical Models of Rapport for Agents}
+\label{sub:sec:ComputationalModelsOfRapport}
+
+Rapport is a mostly unconscious phenomenon~\cite{Zwiers2011} that occurs during interactions marked by strong perceptions of coordination, positivity and mutual attention.
+
+The most important concepts for managing rapport are: planning social behaviours (Figure~\ref{table:BuildingRapportPlan}), learning social behaviours and flexible mechanisms to regulate current actions. Rapport models involve several complex cognitive mechanisms. Therefore it is beneficial to discretise it into smaller sets capable of, for example, enhancing positivity (friendliness) using self-disclosure or enhancing coordination and attentiveness through backchannel and turn-taking strategies~\cite{Sacks1974, Kahn2008, Welbergen2012}. The latter strategies are allied with good listeners as they must able to understand how to provide well-timed adequate feedback (backchannel) and identify appropriate moments to become the speaker (turn taking) and incite further dialogue~\cite{Sacks1974, Poppe2010}.
+
+Zhao, Papangelis, and Cassell, propose a theoretical model to manage long-term rapport~\cite{Zhao2014, Papangelis2014} that is very relevant for current implementations of long-term social companionship agents~\cite{Lisetti2013, Bickmore2005, Kang2005}. Similarly to what was described previously in Section~\ref{subsec:Rapport}, the proposed model treats rapport as an interactional goal that is satisfied through strategies and actions according to the current state of the interaction and the user model (See Table~\ref{table:TCArchitectureDyadicRapportManagement:State}).
+
+The strategies and the selected actions, despite initially representing the general sociocultural norms, must adapt to the interpersonal norms of the relationship and the context~\cite{Zhao2014}. As the relationship evolves, the dyadic state and the internal models should be updated in order to store the most accurate description of the interaction and return better behavioural responses that satisfy the dyad behavioural expectations~\cite{Papangelis2014}.
+
+\vspace{-3mm}
+\begin{table}[]
+    \centering
+    \begin{tabular}{@{}ll@{}}
+        \toprule
+        
+        \multirow{1}{*}{\textbf{Dyadic State}} & Rapport State; Behavioural model; Friendship Status; History \\ \midrule
+        \multirow{2}{*}{\textbf{User Model}} & User goals; Shared knowledge; Task model; \\  
+        & Conversational Agent putative dyadic state \\ \bottomrule        
+
+    \end{tabular}
+    \caption{Relevant data structures for rapport models. Adapted from~\cite{Zhao2014}.}
+    \label{table:TCArchitectureDyadicRapportManagement:State}
+\end{table}
+\vspace{-7mm}
+
+Another important aspect for managing rapport is the ability to continuously adapt to the current interaction and context, give incremental feedback~\cite{Kopp2007, Zwiers2011, Reidsma2011, Visser2014}, and even recover from mistakes~\cite{Kahn2008}. Its usefulness is remarked on complex synchronised behaviours such as speech and handshakes~\cite{Zwiers2011}. This requires bidirectional connections between the behaviour realisers and the behaviour planners to enable quicker corrections~\cite{Reidsma2011}. This also requires incremental planning and execution of behavioural chunks that can be potentially interrupted, modified or even replaced~\cite{Reidsma2011, Visser2014, Kopp2007, Zwiers2011}. This approach moves away from the typical SAIBA model~\cite{Kopp2006} and requires extending the current \ac{BML}~\cite{Kopp2007, Zwiers2011, Reidsma2011} specifications.

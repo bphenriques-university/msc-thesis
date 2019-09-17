@@ -1,0 +1,22 @@
+\subsection{Head Gesture Mimicry}
+\label{sub:sec:HeadNodMimicry}
+
+The Head Gesture Mimicry rapport \textit{Effector} mimics up-down nod gestures and left-right head shakes given the perceptual information returned from \ac{SSI}. In order to make \ac{EMYS} mimic head gestures, we added head nods and head shakes animations to \textit{Nutty Tracks} that takes into account the \textit{Effector} parameters specified in Table~\ref{table:headNodMimicryParameters}. The \textit{Effector} parameters were attributed empirically similar to Facial Expression Mimicry \textit{Effector} (Table~\ref{table:headGesturesMimicryParametersValues}), however, as the sensors seldom detected head gestures during the pilot tests, both gestures' probabilities were set to 1, that is, the agent will always mimic the behaviour.
+
+Lastly, similarly to Facial Expression Mimicry \textit{Effector}, there is an apparent latency between the user's action and the mimicry behaviour, that is only solved by increasing the computational resources.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Parameter}} & \textbf{Up-Down Nods} & \textbf{Left-Right Shakes} \\ \hline
+		Priority & 1 & 1 \\ \hline
+		Trigger Probability & 1 & 1 \\ \hline
+		Intensity Range ($I_{min}$, $I_{max}$) & (10,20) & (40,60) \\ \hline
+		Repetitions Range ($R_{min}$, $R_{max}$) & (2,2) & (2,2)\\ \hline
+		Frequency Range ($F_{min}$, $F_{max}$) &  (40,55) & (40,55)\\ \thickhline		
+		Minimum delay between mimicry behaviours (ms) & 3500 & 3500 \\ \hline		
+	\end{tabular}
+	\caption{Parametrisation of the Head Gesture Mimicry rapport \textit{Effector}.}
+	\label{table:headGesturesMimicryParametersValues}
+\end{table}

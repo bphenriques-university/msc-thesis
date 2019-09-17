@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modulated>
+    <elements>
+        <element h="140.0" id="ListenerIntentPlanner-1460975058540-469"
+            module="ListenerIntentPlanner" name="ListenerIntentPlanner"
+            w="380.0" x="320.0" y="100.0"/>
+        <element h="140.0" id="SSIFrameToSignal-1460975186670-936"
+            module="SSIFrameToSignal" name="SSIFrameToSignal" w="220.0"
+            x="50.0" y="100.0"/>
+        <element h="130.0" id="SSITranslator-1460975885303-284"
+            module="SSITranslator" name="SSITranslatorXmlToFrame&#xa;"
+            w="220.0" x="50.0" y="290.0">
+            <parameter name="isQueue" value="false"/>
+            <parameter name="port" value="61616"/>
+            <parameter name="host" value="localhost"/>
+            <parameter name="topic" value="SSI"/>
+            <window h="310" visible="false" w="325" x="0" y="0"/>
+        </element>
+        <element h="110.0" id="ThalamusConnection-1460993876941-465"
+            module="ThalamusConnection" name="ThalamusConnection"
+            w="310.0" x="720.0" y="120.0"/>
+        <element h="50.0" id="ActiveMQBroker-1460994303646-961"
+            module="ActiveMQBroker" name="ActiveMQBroker" w="80.0"
+            x="260.0" y="20.0">
+            <parameter name="port" value="61616"/>
+            <window h="238" visible="false" w="292" x="0" y="0"/>
+        </element>
+        <element h="50.0" id="LogFrame-1462468324087-410"
+            module="LogFrame" name="LogFrame" w="80.0" x="160.0" y="20.0">
+            <parameter name="blackBackground" value="false"/>
+            <window h="472" visible="false" w="634" x="0" y="0"/>
+        </element>
+        <element h="50.0" id="Logs-1462468336042-502" module="Logs"
+            name="Logs" w="80.0" x="60.0" y="20.0">
+            <parameter name="debug" value="true"/>
+            <parameter name="warning" value="true"/>
+            <parameter name="error" value="true"/>
+            <parameter name="info" value="true"/>
+            <window h="239" visible="false" w="232" x="0" y="0"/>
+        </element>
+    </elements>
+    <connections>
+        <connection connector="SignalEmitterToSignalPerformer"
+            source="ListenerIntentPlanner-1460975058540-469" target="ThalamusConnection-1460993876941-465"/>
+        <connection connector="addLogOutput"
+            source="Logs-1462468336042-502" target="LogFrame-1462468324087-410"/>
+        <connection connector="SSIFrameEmitterToSSIFramePerformer"
+            source="SSITranslator-1460975885303-284" target="SSIFrameToSignal-1460975186670-936"/>
+        <connection connector="SignalEmitterToSignalPerformer"
+            source="SSIFrameToSignal-1460975186670-936" target="ListenerIntentPlanner-1460975058540-469"/>
+    </connections>
+</modulated>

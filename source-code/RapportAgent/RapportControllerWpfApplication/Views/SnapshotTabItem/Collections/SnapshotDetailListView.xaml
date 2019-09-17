@@ -1,0 +1,58 @@
+﻿<DataGrid x:Class="RapportControllerWpfApplication.Views.Collections.SnapshotDetailListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportControllerWpfApplication.Views.Collections"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+             CanUserReorderColumns="False" CanUserResizeColumns="True"
+             RowHeight="40" SelectionMode="Single" CanUserAddRows="False" IsReadOnly="True"
+             ColumnWidth="Auto" HeadersVisibility="Column" VirtualizingStackPanel.VirtualizationMode="Recycling"
+             GridLinesVisibility="Horizontal" AutoGenerateColumns="False">
+
+    <DataGrid.CellStyle>
+        <Style TargetType="DataGridCell" BasedOn="{StaticResource Body_Content_DataGrid_Centering}">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Foreground" Value="Black" />
+                </Trigger>
+                <DataTrigger Binding="{Binding IsExecuting}" Value="True">
+                    <Setter Property="Background" Value="LightGreen"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding HasBeenInterrupted}" Value="True">
+                    <Setter Property="Background" Value="Yellow"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding HasExecuted}" Value="True">
+                    <Setter Property="Background" Value="LimeGreen"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsPending}" Value="True">
+                    <Setter Property="Background" Value="White"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </DataGrid.CellStyle>
+    <DataGrid.Columns>
+        <DataGridTemplateColumn>
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <Button Style="{StaticResource TransparentOnOverButton}" Width="16" Height="16" Margin="5,0,0,0" Click="Button_Click">
+                        <Rectangle Stretch="Fill" Fill="{StaticResource RunIcon}"/>
+                    </Button>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+        <DataGridTextColumn Header="Plugin Name" Binding="{Binding ProposerId}" />
+        <DataGridTextColumn Header="Description" Binding="{Binding Description}"  FontWeight="Bold" />
+        <DataGridTextColumn Header="Group" Binding="{Binding Group}"/>
+        <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" />
+
+        <DataGridTextColumn Header="Time Start" Binding="{Binding Path=TimeStart, StringFormat=\{0:HH:mm:ss.fff\}}" />
+        <DataGridTextColumn Header="Initial Delay" Binding="{Binding InitialDelay}" />
+
+        <DataGridTextColumn Header="Action Id" Binding="{Binding SecondaryId}" />
+        <DataGridTextColumn Header="Interruptible" Binding="{Binding IsInterruptible}" />
+        <DataGridTextColumn Header="Timeout (ms)" Binding="{Binding TimeoutMs}" />
+    </DataGrid.Columns>
+</DataGrid>

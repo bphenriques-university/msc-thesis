@@ -1,0 +1,42 @@
+% This is "Background.tex"
+
+\begin{table*}[t]
+  \centering
+	\begin{tabular}{|l|l|l|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Category}} & \multicolumn{1}{c|}{\textbf{Subcategory}} & \textbf{Utterance}  \\ \hline	
+	intro & greet & \specialcell{Hi $|$\texttt{Name}$|$! $<$gaze(person)$>$} \\ \hline
+	game & score & \specialcell{Yey!$<$Animate(surprise2)$>$}  \\ \hline
+	game & results & \specialcell{Managed $<$Points$>$! $<$gaze(person)$>$} \\ \hline
+	end & ending & \specialcell{I am glad to have met you! $<$animate(happy4)$>$} \\ \hline		
+	\end{tabular}
+	\caption{Set of utterances compatible with \acf{SERA}. Actions are delimited by $<$ and $>$, and substitution variables by $|$.}
+	\label{table:exampleutterances}
+\end{table*}
+
+\section{Rapport}
+\label{sec:Rapport}
+
+The feeling of flow and connection during interactions is formally known as rapport~\cite{Wang2009}. Spencer Oatey further suggests that rapport management can be divided into three main objectives: build, maintain or destroy~\cite{Spencer-Oatey2005}. These goals are only be accomplished by manipulating the three components of rapport suggested by Tickle-Degnen and Rosenthal~\cite{Tickle-Degnen1990} (Figure~\ref{table:BuildingRapportPlan}):
+\begin{itemize}
+	\item \textbf{Positivity}: the feeling of approval and friendliness (e.g. humour and self-disclosure);
+	\item \textbf{Mutual attention}: the feeling that the other's attention is focused on the individual (e.g. mutual gaze);
+	\item \textbf{Coordination}: the feeling of predictability and being in-sync (e.g. postural mimicry).
+\end{itemize}
+
+Above all, it is essential that the three components of rapport co-exist during interactions~\cite{Grahe1999, Wang2010, Zhao2014, Cassell2007}. Naturally, the relative weights of these components, as well as the strategies may change as the relationship evolves beyond that of strangers~\cite{Wang2010, Zhao2014, Cassell2007}.
+
+
+\section{Related Work}
+\label{sec:relatedwork}
+
+Regarding computation models of rapport, Zhao, Papangelis, and Cassell, propose a theoretical model to manage long-term rapport~\cite{Zhao2014, Papangelis2014} that follows the planning concept depicted in Figure~\ref{table:BuildingRapportPlan}. The model considers adapting the agent's behavioural responses according to the current nature of the relationship that is continuously in evolution. In addition, researchers have noted the importance of being able to continuously adapt to the interaction, give incremental feedback~\cite{Kopp2006, Kopp2007, Zwiers2011, Reidsma2011, Visser2014}, and even recover from mistakes~\cite{Kahn2008}. This requires incremental planning and execution of behavioural chunks that can be potentially interrupted, modified, and even replaced~\cite{Reidsma2011, Visser2014, Kopp2007, Zwiers2011}.
+
+
+
+Lastly, researchers have been developing models for particular strategies of rapport such as gaze~\cite{Skantze2013, Andrist2015, Mutlu2006, Stanton2014, Peters2005, Andrist2014, Baxter2014, Wang2010}, and backchannel~\cite{Truong2011, Morency2008, Huang2010, Poppe2011, Poppe2010, Kok2012, Niewiadomski2009}. These systems are either rule-based~\cite{Kahn2008, Riek2009, Sidner2006, Hess2010, Melo2011, Wang2009, Tullio2015, Niewiadomski2009, Andrist2015}, \ac{ML}-based~\cite{Kok2012, Mohammad2010, Chao2010, Cakmak2010, Cakmak2012, Thomaz2006, Mutlu2006, Knox2014}, or even, more recently, hybrid~\cite{Schroder2010, Buschmeier2011, Sequeira2016}. In particular, the developed framework, that supports the rapport model described in Section~\ref{sub:rapportModel}, is built using the \acf{SERA} ecosystem as it provides the required tools to develop robotic agents.
+
+%Inspired on current literature on rapport~\cite{Buschmeier2011, Spencer-Oatey2005, Zhao2014, Papangelis2014} and social agents~\cite{Zwiers2011, Reidsma2011, Riek2009, Niewiadomski2009, Andrist2014, Andrist2015, Cassell2007, Wang2009, Schroder2010, Buschmeier2011, Tullio2015}, we selected the most prominent features that allows researchers to design agents (either virtual or robotic) capable of building rapport and establish closer relationships more efficiently with humans. For this purpose, the built rapport model has the following goals:
+
+
+%This project focus on  on building the foundations for the latter, basing mostly on the SEMAINE~\cite{Schroder2010}, Virtual Rapport 2.0~\cite{Buschmeier2011}, GRETA~\cite{Niewiadomski2009}, and work done by Andrist et. al.~\cite{Andrist2015}.

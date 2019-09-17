@@ -1,0 +1,18 @@
+\section{Creating Rapport Agents using Hybrid Approaches}
+
+Recently, researchers are exploring hybrid agents that combine the advantage of rule-based systems to define high-level interaction rules that are triggered by simpler perceptual states and data-driven models to generate behaviour according to more complex situations that may emerge during interactions.
+
+Pedro Sequeira et. al. proposes the usage of mock-up studies and the previously mentioned restricted-perception \ac{WoZ} (Section~\ref{subsec:woz}) to develop a Hybrid Controller that takes advantage of rule-based systems and \ac{ML}-based systems in a tutoring scenario~\cite{Sequeira2016}. Following Figure~\ref{fig:RestrictedPerception_DesignProcess}, the inherent agent's limitations are defined in the \textit{Task AI} to be used on the restricted-perception \ac{WoZ} Studies. The hybrid controller is based on the expert knowledge and the \ac{WoZ} data collected during the previous stage, and is responsible for deciding when and which behaviour to trigger. For example, a rule-based component would trigger a summarisation of the main achievements during the game and another \ac{ML}-based component would trigger actions that were learnt during the restricted-perception \ac{WoZ} studies (recall that the wizards controls ``which interaction behaviour should be triggered and when to trigger it''~\cite{Sequeira2016}). In the last stage, \textit{Strategy Refinement}, \ac{HRI} researchers assess the agent's performance and refines the controller if necessary for situations that may not have been properly learned or, for situations that require more relevant information.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{images/RestrictedPerception_DesignProcess.png}
+	\caption{Restricted-perception \ac{WoZ} study methodology. From~\cite{Sequeira2016}.}
+	\label{fig:RestrictedPerception_DesignProcess}
+\end{figure}
+
+
+
+
+\input{Chapters/RelatedWork/VirtualRapport2}
+\input{Chapters/RelatedWork/AutonomousSensitiveArtificialListeners}

@@ -1,0 +1,12 @@
+\section{Conclusion}
+\label{sec:Conclusion}
+
+The state-of-art in rapport agents suggests that it is very difficult to implement a computational model capable of managing rapport similarly to humans. However, by restricting such models, it is possible to create imperfect systems that are capable, at some length, to increase rapport between agents and humans. There are not many agents with data-driven components for managing rapport in \acl{HRI}. Most of the \ac{ML}-based current agents use data-driven classifiers to improve their task performance and not, as we intend, improve their social behaviour performance.
+
+The current state-of-the-art covers two classes of systems. On one hand, rule-based systems are easier to develop but are more rigid, on the another, \ac{ML}-based systems are more effective on generating behaviours that are perceived as more natural by humans. Moreover, some authors have been working on continuous interaction systems that are capable of interrupting or even adapting their current set of active actions. Other researchers have been working on agents that pro-actively seek task-related information to complement their knowledge and improve their results.
+
+The proposed solution aims to create a robotic rapport agent that takes the best of both rule-based and \ac{ML}-based systems, and a novel approach for learning backchannels using restricted-perception \ac{WoZ} and human experts for corrective feedback. Following the tendency and suggestions made by researchers, we will use \ac{RL} as the dominant classifier (albeit other classifiers may be considered) and we will repeat the learning stage until there are signs of convergence. The developed solution will be internally incorporated in \ac{SERA} framework that is being actively developed in \ac{GAIPS}, has been used extensively to conduct several studies and it is well integrated with \ac{EMYS}.
+
+To assess the performance, the untrained system (rule-based) will be compared with the trained system in a negotiation scenario, Split Or Steal using robot \ac{EMYS}. We expect the backchannel model, and therefore the rapport agent, after some iterations, to be able to produce more natural backchannels than the untrained system, and elicit more cooperation from the adversary by building rapport.
+
+The development of the proposed work will follow the schedule presented in Appendix~\ref{app:Planning}.

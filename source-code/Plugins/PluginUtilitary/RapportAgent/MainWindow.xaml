@@ -1,0 +1,22 @@
+﻿<pluginUtil:RCPluginWindow x:Class="RapportAgentPlugin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RapportAgentPlugin"
+        xmlns:utterances="clr-namespace:RapportAgentPlugin.Views.Utterances" 
+        xmlns:gaze="clr-namespace:RapportAgentPlugin.Views.Gaze"
+        xmlns:physicalSpace="clr-namespace:RapportAgentPlugin.Views.PhysicalSpace"
+        xmlns:pluginUtil="clr-namespace:RapportActionProposer.Util;assembly=RapportActionProposer"
+        xmlns:sounds="clr-namespace:RapportAgentPlugin.Views.Sounds"
+        mc:Ignorable="d"
+        Title="Rapport Agent" MinHeight="400" MinWidth="700">
+    <Grid>
+        <TabControl x:Name="tabControl">
+            <utterances:UtterancesTab />
+            <gaze:GazeTabItem />
+            <physicalSpace:PhysicalSpaceTab />
+            <sounds:SoundsTabItem />
+        </TabControl>
+    </Grid>
+</pluginUtil:RCPluginWindow>

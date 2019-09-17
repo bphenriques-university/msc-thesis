@@ -1,0 +1,36 @@
+CATEGORY,SUBCATEGORY,TEXT,PRIORITY,INITIALDELAY,TIMEOUT
+investment,started,"How much will you invest in me? You have nothing to lose!",2,0,20000
+investment,started,"Utterance HeadNod(1,1,1)",0,0,30000
+investment,started,"headNod(1,1)",0,0,30000
+investment,match_start,"This will do wonderfully! See ya!",2,0,20000
+investment,high_value,"Thank you for trusting me with <investment>!",2,0,20000
+investment,low_value,"<investment> ? Thank you, I hope I can gain your trust next time we meet!",2,0,20000
+investment,end,"Just finished! I managed <points>! animate(joy3) Aren't you curious how much I'll give you in return?",3,0,20000
+investment,human_will_invest,"Invest in me! You have nothing to lose.",2,0,20000
+investment,choosing_return_value,"Humm, I will give you <amount> in return!",2,0,20000
+match,beginning,"Let's start!",2,0,20000
+match,start,"Good luck!",2,0,20000
+match,emys_incorrect_target,"Ups! animate(sad1)",1,0,20000
+match,emys_incorrect_target,"Missed ... animate(sad2)",1,0,20000
+match,emys_correct_target,"Alright!",1,0,20000
+match,emys_correct_target,"This is doing well!",1,0,20000
+match,player_correct_target,"Wow ! Keep on!",1,0,20000
+match,player_incorrect_target,"Don't give up!",1,0,20000
+match,end,"This was very fun! You played very well!",2,0,20000
+match,waiting,"Are you ready?",1,0,20000
+match,choosing_value,"Thank you! I will invest <value>!",3,0,20000
+results,good,"I got <emysPoints>, how about you?",2,0,20000
+results,average,"I got <emysPoints>, how about you?",2,0,20000
+results,bad,"I got <emysPoints>, how about you?",2,0,20000
+return,high_value,"Here you go",2,0,20000
+return,low_value,"Here you go",2,0,20000
+session,start,"Hello, my name is Émys and I also know how to play cards! Pleasure to meet you. I will wait while you practice!",2,0,20000
+session,end,"Please take <given> with you! I loved playing with you! Thank you for coming! animate(jo2)",2,0,20000
+training,emys_ready,"We can start whenever you ready!",2,0,20000
+training,emys_incorrect_target,"",0,0,30000
+training,emys_correct_target,"None",2,0,20000
+training,player_incorrect_target,"You are doing great!",2,0,20000
+training,player_correct_target,"Nice!",2,0,20000
+training,end,"<score>? Not bad! Are you ready for the main event?",2,0,20000
+training,match_start,"You will see it is not that hard",2,0,20000
+training,waiting,"Whenever you ready",1,0,20000

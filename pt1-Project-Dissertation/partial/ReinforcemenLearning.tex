@@ -1,0 +1,32 @@
+\subsection{Reinforcement Learning}
+\label{subsec:ReinforcementLearning}
+
+\acf{RL} is sub-field in \ac{ML} that guides agents' actions, in an environment, to maximise a cumulative reward~\cite{Sutton:1998:IRL:551283, Dayan1992}. \ac{RL} systems contain:
+
+\begin{itemize}
+	\item A set of possible world states $S$;
+	\item A set of possible actions $A$;
+	\item Transitioning rules between states;
+	\item A immediate reward function $R(s,s',a)$ with $a \in A$, and $s,s' \in S$;
+	\item Rules to describe the environment.
+\end{itemize}
+
+Typically, these systems deal with environments where the optimal reward function might not be clear~\cite{Sutton:1998:IRL:551283}. To tackle this issue, \ac{RL} agents uses exploration strategies to find the best policy function $\pi(s)$ that returns the most probable action $a \in A$, given a state $s \in S$, that maximises the cumulative reward (Equation~\ref{eq:policy}). In social behaviours, agents that are eager to interact with its partner (instead of being silent) will acquire more information regarding it's performance during interactions and will be able to learn more quickly as they test new different interactional strategies.
+
+\vspace{-3mm}
+\begin{equation}
+	\pi(s) = a,\,a \in A\, and\,s \in S
+	\label{eq:policy}
+\end{equation}
+
+One well researched \ac{RL} algorithm is Q-Learning~\cite{Dayan1992}. In Q-Learning, the virtual agents learns and stores Q-Values that depends on the reward value for a given action $R(s_t,a_t,s_{t+1})$, on an estimation of future reward $\max_{a}Q(s_{t+1},a)$, on the learning rate $\alpha_t \in {[0,1]}$, and on the discount value $\gamma \in {[0,1]}$ (Equation~\ref{eq:QLearning}). The learning rate $\alpha_t$ defines the weight of old information during learning, and the discount value $\gamma$ defines the weight of future rewards.
+
+\vspace{-4mm}
+\begin{equation}
+	Q(s_t,a_t) = (1-\alpha_t)Q(s_t,a_t) + \alpha_t\left[R(s_t,a_t,s_{t+1}) + \gamma\max_{a}Q(s_{t+1},a)\right]
+	\label{eq:QLearning}
+\end{equation}
+
+The Q-Values can be zero at the beginning of the learning process, meaning that the agent's does not have previous, or, value different than zero, meaning the the agent has previous knowledge~\cite{Malfaz2011}. The values for $\alpha$ and $\gamma$ are defined according to the developed scenario, the purposes of the agents and overall quality of the final \ac{RL} model.
+
+Lastly, there are two main issues when using \ac{RL}: identifying the reward function and gathering data to satisfy the combinatorial explosion of environment features and possible actions. To solve the first issue, authors suggest extracting the reward function from human experts during demonstrations using inverse \ac{RL}~\cite{Ng2000, Thomaz2006}. That is, collect feedback from human experts regarding the virtual agent's performance and use the information collected to define a reward function. To solve the second issue, the model should take into account fewer environment features and actions.

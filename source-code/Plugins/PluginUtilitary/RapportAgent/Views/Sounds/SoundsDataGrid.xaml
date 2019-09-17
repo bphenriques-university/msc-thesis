@@ -1,0 +1,33 @@
+﻿<DataGrid x:Class="RapportAgentPlugin.Views.Sounds.SoundsDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportAgentPlugin.Views.Sounds"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+            SelectionMode="Single" CanUserAddRows="False"
+            ColumnWidth="*" HeadersVisibility="Column"
+            VirtualizingStackPanel.VirtualizationMode="Recycling" GridLinesVisibility="Horizontal" AutoGenerateColumns="False">
+    <DataGrid.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../SharedResources/Icons.xaml"/>
+                <ResourceDictionary Source="../SharedResources/Other.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </DataGrid.Resources>
+    <DataGrid.Columns>
+        <DataGridTemplateColumn CanUserResize="False" CanUserReorder="False" Width="32">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <Button Name="Run" Width="16" Height="16" Click="Run_Click" Style="{StaticResource TransparentOnHover}">
+                        <Rectangle Stretch="Fill" Fill="{StaticResource RunIcon}"/>
+                    </Button>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn SortDirection="Descending" Header="Identifier" Binding="{Binding Id}" CanUserReorder="False" CanUserResize="False" />
+        <DataGridTextColumn CanUserSort="False" Width="*" Header="Location" Binding="{Binding Location}" CanUserReorder="False" CanUserResize="False" />
+    </DataGrid.Columns>
+</DataGrid>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="RapportAgentPlugin.Views.Utterances.Elements.UtterancesFileListGroupBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportAgentPlugin.Views.Utterances.Elements"
+             xmlns:local2="clr-namespace:RapportAgentPlugin.Views.Utterances"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RapportAgentPlugin;component/Views/SharedResources/Icons.xaml"/>
+                <ResourceDictionary Source="/RapportAgentPlugin;component/Views/SharedResources/Other.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <GroupBox x:Name="AvailableUtterancesFilesGroup" Padding="5" >
+        <GroupBox.Header>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Available Utterances" />
+                <Button Click="Reload_Folders_Click" Style="{StaticResource TransparentOnHover}" VerticalContentAlignment="Center" Margin="5,0,0,0" >
+                    <Rectangle Width="16" Height="16" Fill="{StaticResource RefreshIcon}"/>
+                </Button>
+            </StackPanel>
+        </GroupBox.Header>
+
+        <local2:UtterancesFilesGrid x:Name="UtterancesFilesGrid" ItemsSource="{Binding UtterancesManager.FileListManager.AvailableUtterancesFiles}" IsReadOnly="True" />
+    </GroupBox>
+</UserControl>

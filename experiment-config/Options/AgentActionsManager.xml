@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<AgentActionsManagerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Character>QuickNumbers</Character>
+  <UtteranceFileName>Utterances - UtterancesEN (3) - Cópia</UtteranceFileName>
+  <SoundsFolder>C:\Users\Bruno\Documents\MSc-thesis\Binaries\Options\SoundLibrary</SoundsFolder>
+  <UtterancesFolder>C:\Users\Bruno\Documents\MSc-thesis\Binaries\Options\SoundLibrary</UtterancesFolder>
+  <AvailableReplacementVariables>
+    <item>
+      <key>
+        <string>8ae138cd-1a7c-4bab-a748-2c6699ac9609</string>
+      </key>
+      <value>
+        <string>Replacement</string>
+      </value>
+    </item>
+  </AvailableReplacementVariables>
+</AgentActionsManagerSettings>

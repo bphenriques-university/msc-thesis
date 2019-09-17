@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<GazeSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Introvert>false</Introvert>
+  <IsBetweenTasks>true</IsBetweenTasks>
+  <Debug>false</Debug>
+  <ExtrovertBehaviour>
+    <LookFacePriority>1</LookFacePriority>
+    <LookGamePriority>1</LookGamePriority>
+    <GameTarget>bottomFront</GameTarget>
+    <PersonTarget>middleFront</PersonTarget>
+    <LookGameBetweenTasksDuration>1010</LookGameBetweenTasksDuration>
+    <LookFaceBetweenTasksDuration>3910</LookFaceBetweenTasksDuration>
+    <LookGameInTasksDuration>4040</LookGameInTasksDuration>
+    <LookFaceInTasksDuration>2660</LookFaceInTasksDuration>
+  </ExtrovertBehaviour>
+  <IntrovertBehaviour>
+    <LookFacePriority>1</LookFacePriority>
+    <LookGamePriority>1</LookGamePriority>
+    <GameTarget>bottomFront</GameTarget>
+    <PersonTarget>middleFront</PersonTarget>
+    <LookGameBetweenTasksDuration>6210</LookGameBetweenTasksDuration>
+    <LookFaceBetweenTasksDuration>1590</LookFaceBetweenTasksDuration>
+    <LookGameInTasksDuration>11650</LookGameInTasksDuration>
+    <LookFaceInTasksDuration>570</LookFaceInTasksDuration>
+  </IntrovertBehaviour>
+</GazeSettings>

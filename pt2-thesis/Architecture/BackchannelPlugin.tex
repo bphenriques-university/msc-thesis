@@ -1,0 +1,42 @@
+\subsection{Backchannel}
+\label{sub:sec:backchannel}
+
+The Backchannel rapport \textit{Effector} is based on the work developed on the GRETA system~\cite{Niewiadomski2009}, that analyses the variations of the pitch perceived by the openSMILE component of \ac{SSI}. Given the backchannel timings received from the GRETA\textsuperscript{PP} \textit{Perceiver} plugin, the \textit{Effector} plugin produces only head nods, as we were not able to generate a convincing \textit{Hmm hmmm} with a similar pitch as the generated voice by the \textit{Speech Server}. Ideally, the agent would alternate between head nods, \textit{Hmm hmmm} vocalisations, or both head nods and vocalisations. The parameters' values are depicted in Table~\ref{table:headGesturesMimicryParametersValues}, which are almost identical to the ones used in the Head Gesture Mimicry \textit{Effector}, except the priority is higher as the action proposals are executed on discrete states of the interaction. The trigger probability is identical to the one used in GRETA.
+
+Despite succeeding with the integration of \ac{SSI} and GRETA, the resulting Backchannel \textit{Effector} did not behave as expected due to environmental factors that could not be controlled without changing the agent's embodiment as:
+\begin{itemize}
+	\item The \ac{EMYS}'s movement are noisy;
+	\item The \ac{EMYS}'s voice is played through external speakers.
+\end{itemize}
+
+We attempted to reduce the impact of these factors by:
+\begin{itemize}
+	\item Use directional noise-suppressing microphone;
+	\item Reduce the microphone sensivity;
+	\item Adapt the \ac{SSI} pipeline to increase the pitch baseline.
+\end{itemize}
+
+To conclude, despite these efforts, this \textit{Effector} did not behave as intended, therefore it was not used in the user studies in Chapter~\ref{chap:userstudies}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Parameter}} & \textbf{Backchannel Head Nod}\\ \hline
+		Priority & 2 \\ \hline
+		Trigger Probability & 0.4 \\ \hline
+		Intensity Range ($I_{min}$, $I_{max}$) & (10,20) \\ \hline
+		Repetitions Range ($R_{min}$, $R_{max}$) & (2,2) \\ \hline
+		Frequency Range ($F_{min}$, $F_{max}$) &  (40,55) \\ \thickhline		
+		Minimum delay between mimicry behaviours (ms) & 5000 \\ \hline		
+	\end{tabular}
+	\caption{Parametrisation of the Backchannel rapport \textit{Effector}.}
+	\label{table:headGesturesMimicryParametersValues}
+\end{table}
+
+\section{Final Remarks}
+During the previous sections, the document describes the system that implements the rapport model described in Chapter~\ref{chap:rapportModel} and extends the \ac{SERA} ecosystem to create robotic agents capable of managing rapport following current literature on models that tailor behavioural strategies to the dyadic state of the interaction. The presented \textit{Effectors} were developed and tested for robot \ac{EMYS} (Figure~\ref{fig:robots:EMYS2}), therefore the values described in Tables~\ref{table:facialMimicryParametersValues} to~\ref{table:headGesturesMimicryParametersValues} are tailored to this embodiment. Auxiliary plugins may have been developed by the researcher to monitor the scenario and trigger contextual utterances that will attempt to enhance positivity and build rapport.  In additional, the system aids the development of customisable plugins so that they can be easily changed by non-technical researchers such as psychiatrists whose knowledge on \ac{HRI} is crucial to building agents. Finally, and above all, pilot tests should be done so that the final set of possible actions sent by the agent are effective on satisfying the interactional goals of the scenario and manage rapport with the user.
+
+
+%, and on the work developed by Huang et. al.~\ref{Buschmeier2011} on a virtual rapport agent. 
+%Limited backchannel behaviours 

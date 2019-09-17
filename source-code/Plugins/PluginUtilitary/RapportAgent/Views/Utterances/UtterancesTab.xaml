@@ -1,0 +1,64 @@
+﻿<TabItem x:Class="RapportAgentPlugin.Views.Utterances.UtterancesTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportAgentPlugin.Views.Utterances"
+            xmlns:elements="clr-namespace:RapportAgentPlugin.Views.Utterances.Elements"
+            xmlns:currentUtterance="clr-namespace:RapportAgentPlugin.Views.Utterances.CurrentUtterance"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <TabItem.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../SharedResources/Icons.xaml"/>
+                <ResourceDictionary Source="../SharedResources/Other.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </TabItem.Resources>
+    <TabItem.Header>
+        <StackPanel Orientation="Horizontal">
+            <Rectangle Width="12" Height="12" Margin="0,0,5,0" Fill="{StaticResource UtteranceIcon}"/>
+            <TextBlock Text="Utterances" />
+        </StackPanel>
+    </TabItem.Header>
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <elements:UtterancesFileListGroupBox x:Name="AvailableUtterancesFilesGroup"  Grid.Row="0" Grid.Column="0" />
+            <elements:VariablesGridGroupBox x:Name="VariableGroup"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+
+            <GroupBox x:Name="CategoriesGroup" Grid.Row="1" Grid.Column="0" Padding="5" >
+                <GroupBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Categories" />
+                        <ToggleButton ToolTip="Unlock to edit, Re-lock to save and apply" IsChecked="{Binding UtterancesManager.FileManager.EditModeLocked}" Style="{StaticResource LockUnlockedToggleStyle}" Margin="5,0,0,0" />
+                        <Button ToolTip="Restore original utterances from file" Click="Reload_Utterances_Disk_Click" Style="{StaticResource TransparentOnHover}" VerticalContentAlignment="Center" Margin="5,0,0,0">
+                            <Rectangle Width="16" Height="16" Fill="{StaticResource RefreshIcon}"/>
+                        </Button>
+                    </StackPanel>
+                </GroupBox.Header>
+
+                <currentUtterance:CategoriesGrid x:Name="CategoryDatagrid" SelectedIndex="0" ItemsSource="{Binding UtterancesManager.FileManager.Categories}" IsReadOnly="{Binding UtterancesManager.FileManager.EditModeLocked}" SelectionMode="Single" CanUserAddRows="True"  />
+            </GroupBox>
+            <GroupBox x:Name="SubCategoriesGroup" Grid.Row="1" Grid.Column="1" Header="Sub Category" Padding="5">
+                <currentUtterance:SubCategoryGrid x:Name="SubCategoryDatagrid" SelectedValuePath="Value" ItemsSource="{Binding SelectedItem.SubCategories, ElementName=CategoryDatagrid}" IsReadOnly="{Binding UtterancesManager.FileManager.EditModeLocked}" SelectionMode="Single" CanUserAddRows="True" />
+            </GroupBox>
+
+            <GroupBox x:Name="UtterancesGroup" Grid.Row="1" Grid.Column="2" Padding="5" Header="Available Utterances">
+                <currentUtterance:UtterancesGrid ItemsSource="{Binding SelectedItem.Utterances, ElementName=SubCategoryDatagrid}" IsReadOnly="{Binding UtterancesManager.FileManager.EditModeLocked}" SelectedIndex="0" SelectionMode="Single" CanUserAddRows="True" />
+            </GroupBox>
+
+            <elements:CurrentSettingsGroupBox  x:Name="SettingsGroup" Grid.Row="2" Grid.ColumnSpan="3"  />
+        </Grid>
+</TabItem>

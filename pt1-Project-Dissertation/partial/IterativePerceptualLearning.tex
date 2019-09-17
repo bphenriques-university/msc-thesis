@@ -1,0 +1,41 @@
+\subsubsection{\acl{IPL}} \hspace*{\fill} \\
+\label{subsec:IterativePerceptualLearning}
+
+Kok et al., developed an iterative data-driven rapport model focused on generating timings for backchannel behaviours in a dyadic conversational setting~\cite{Kok2012}. The learning stage is iterated several times, each one is more refined and capable of representing generalised behaviours than the previous one. 
+
+Usually, corpus-based backchannel models retrieves negative samples from random moments in the interaction that do not overlap with the positive samples marked in the corpus~\cite{Kok2012}. However, this approach potentially leads to greater number of false negatives by not taking into account that social signals are optional and a reflection of the listener's personality. Therefore different behaviour from the corpus can also be recognised as socially appropriate. In order to tackle this issue, \ac{IPL}, generates social signals and uses perceptual (subjective) evaluation to identify the moments in the interaction that are perceived as socially appropriate and inappropriate.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{\textbf{System Description}}
+
+Following the representation of the \ac{IPL} system in Figure~\ref{fig:ipl_system}, the system starts with an initial \ac{ML} model (yellow area) that is trained using the corpus-based mentioned. From the corpus~\cite{DeKok2011} it was extracted three types of features: prosody (112 features), speaking (1 feature) and looking (1 feature). After the first subjective evaluation, the negative samples are discarded and replaced by the ones rated by the users. Then, through several iterations of generation  (pink areas), evaluation (blue areas), and learning (green areas) the model is refined and its understanding regarding proper timings for social behaviour evolves.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{images/IPL_system.png}
+	\caption{Schematic representation of the \ac{IPL} framework. The generation, evaluation and learning stage are shown in pink, blue and green, respectively. From~\cite{Kok2012}.}
+	\label{fig:ipl_system}
+\end{figure}
+
+%In the generation stage, according to the current model and the partner's behaviour,  
+
+During the generation, non-verbal behaviours are computer generated according to the \ac{ML} classifier and the feature vectors created from the partner's behaviour at a given instance. Then, during the evaluation, using \ac{PCS}~\cite{Huang2010}, multiple subjects evaluate the generated behaviours by pressing a \textit{Yuck} button whenever they would rate the agent's behaviour as socially inappropriate \cite{Poppe2011}. Finally, during the final stage (learning) the retrieved positive and negatives samples are used to train the classifier.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{\textbf{Evaluation}}
+
+In the evaluation, in each iteration, the authors compared the traditional corpus-based with the iterative approach on face-to-face conversations between the \ac{IPL} agent (listener) and a human subject (speaker) using precision (Equation~\ref{eqn:precision}), recall (Equation~\ref{eqn:Recall}), and perceptual evaluation (\textit{Yuck} button). The experiment lasted for 4 iterations, and the corpus-based system and \ac{IPL} system were trained using the same interactions. The stimuli was a speaker's video from the corpus with a synchronised animated listener capable of only nodding his head while making utterances. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{\textbf{Discussion}}
+
+Human subjects perceived the \ac{IPL} virtual agent's backchannels as natural. However, the system was limited because it lacked other relevant features to manage rapport, e.g., mutual gaze, smile, and head angles. This led to, as the author describes, ``a rapid saturation of the model''. Additionally, the authors recommend avoiding \ac{SVM} models because they are not sequential (do not analyse sequential patterns).
+ 
+To conclude there are several relevant positive aspects from the model to the proposed solution:
+\begin{itemize}
+	\item Iterative approach that is continuously refined and improved;
+	\item Perceptual evaluation to identify inappropriate moments in the interactions;
+	\item Limiting the listener's perception and increase his focus by limiting the agent's actions;
+	\item Generate 25\% more backchannels for the training stage in order to collect more data.
+\end{itemize}

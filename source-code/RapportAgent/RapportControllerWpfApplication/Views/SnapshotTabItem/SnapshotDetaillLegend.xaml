@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="RapportControllerWpfApplication.Views.SnapshotTabItem.SnapshotDetaillLegend"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportControllerWpfApplication.Views.SnapshotTabItem"
+             mc:Ignorable="d" Height="30.411" Width="342.74">
+    <StackPanel Orientation="Horizontal" >
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Height="Auto" Margin="10,0,0,0">
+            <Border BorderBrush="Black" BorderThickness="0.5" Width="13" Height="13">
+                <Canvas Background="White" Height="10" Width="10"/>
+            </Border>
+            <TextBlock Text="Pending" Margin="5,1,0,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Height="Auto" Margin="10,0,0,0">
+            <Border BorderBrush="Black" BorderThickness="0.5" Width="13" Height="13">
+                <Canvas Background="LightGreen" Height="10" Width="10" />
+            </Border>
+            <TextBlock Text="Executing" Margin="5,1,0,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Height="Auto" Margin="10,0,0,0">
+            <Border BorderBrush="Black" BorderThickness="0.5" Width="13" Height="13">
+                <Canvas Background="LimeGreen" Height="10" Width="10" />
+            </Border>
+            <TextBlock Text="Executed" Margin="5,1,0,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Height="Auto" Margin="10,0,0,0">
+            <Border BorderBrush="Black" BorderThickness="0.5" Width="13" Height="13">
+                <Canvas Background="Yellow" Height="10" Width="10" />
+            </Border>
+            <TextBlock Text="Interrupted" Margin="5,1,0,0"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

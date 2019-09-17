@@ -1,0 +1,33 @@
+\section{Creating Rapport Agent using Data-Driven Based Approaches}
+\label{sec:datadrivenbasedAgents}
+
+Rule-based systems are not easily scalable knowing that it is impossible to program an agent to handle every possible situation and outcome, especially when interacting with the unpredictability of human behaviour. Therefore, some scenarios may benefit from having agents capable of adapting to changes in the external world and generate more appropriate social behaviour using data-driven models through several \ac{ML} approaches. Despite not being used actively by this thesis systems, it is fundamental to mention current research work on this area as it is proving invaluable to create agents capable of producing more natural behavioural in comparison with simpler rule-based systems.
+
+\subsection{Supervised Learning}
+In supervised learning, the algorithms infer a function from a labelled training set that contains both the input set and the corresponding target value. 
+
+Kok et al., developed an iterative data-driven rapport model focused on generating timings for backchannel behaviours in a dyadic conversational setting~\cite{Kok2012}, \ac{IPL}. The distinctive aspect is the usage of perceptual (subjective) evaluation to identify the moments of the interaction that are perceived as socially inappropriate. In the perceptual evaluation, multiple subjects evaluate the agent's behaviours by pressing a \textit{Yuck} button whenever they would rate each one as socially inappropriate (\ac{PCS})~\cite{Huang2010, Poppe2011}. The resulting model takes into consideration that different listeners have different personalities and that some social behaviours are not mandatory and, therefore not socially inappropriate if they do not occur. This sample retrieval contrasts with the typical corpus-based backchannel models, as in the latter the negative samples are retrieved randomly as long as they do not overlap with the positive samples marked in the corpus~\cite{Kok2012}. Following Figure~\ref{fig:ipl_system}, the typical corpus-based approach is used as the baseline~\cite{DeKok2011} (yellow area) that will be refined with every sequence of generation of behaviour (pink area), subjective evaluation (blue area) and finally training (green area). The resulting model was perceived more natural when compared with the tradition corpus-based approach, however, the authors suggest extending their work with more relevant features from rapport (e.g., mutual gaze, head angles and smiles).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{images/IPL_system.png}
+	\caption{Schematic representation of the \ac{IPL} framework. From~\cite{Kok2012}.}
+	\label{fig:ipl_system}
+\end{figure}
+
+\subsection{Unsupervised Learning}
+
+In unsupervised learning, as opposed to supervised, the data does not contain the target value, therefore, the algorithms will try to cluster the data into groups regardless of their meaning.
+
+Mohammad et al., propose a model for interactive robots that can learn how to interact naturally with human conversational partners in different environments and contexts~\cite{Mohammad2010} using unsupervised learning. One of the tested successful scenarios was learning how to apply backchannels in a dyadic setting with a human instructor. According to their results, the backchannel behaviour generation was more natural, performing better than the traditional rule-based, however, there is no comparison regarding the traditional supervised learning approaches.
+
+\subsection{Active Learning}
+In active learning, the algorithms interact to seek knowledge regarding how to classify an instance with a label~\cite{Bishop2006}.
+
+Cakmak, Thomaz and colleagues have been researching the potential of active learning on agents that actively seek information and fill gaps in their knowledge, potentially improving their performance~\cite{Chao2010, Cakmak2010, Cakmak2012, Thomaz2006}. In their studies, they noticed that people who better understand the agent's queries are able to train the model with ``perfect accuracy relatively quickly'' and had more confidence on the trained model performance~\cite{Chao2010}. However, previous work has been more focused on learning task-related information and not, learning better interactional models to build and maintain rapport.
+
+Moreover, it is important to properly design the experiments to correctly collect data. For example, Thomaz et al., developed an agent using reinforcement learning \cite{Thomaz2006}. During the experiment, despite asking the humans not to provide feedback (only guidance), they influenced the results. As the author describes ``people use the reward signal to give anticipatory rewards or future directed guidance for the agent''.
+
+\subsection{\acf{WoZ}}
+\label{subsec:woz}
+In \acf{WoZ} studies~\cite{Steinfeld2009}, subjects are led to believe that they are interacting with an autonomous robot when, in fact, they are interacting with a human (the wizard). Following the current trend of using \ac{WoZ} studies~\cite{Steinfeld2009} to train virtual agents~\cite{Knox2014, Mutlu2006} to be more socially competent, Pedro Sequeira et. al. propose a methodology for discovering interaction strategies from restricted-perception \ac{WoZ} studies~\cite{Sequeira2016}. In restricted-perception \ac{WoZ}, the wizard's perceptions and actions are limited to the same extent as the agent enabling a better learning environment and better resemblance to the studies environment~\cite{Sequeira2016}. The set of perceptions and actions are collected using mock-up studies. The disadvantage of this approach is that it requires more preparation than the unrestricted \ac{WoZ} and, even then, it might be impossible to completely isolate the wizard's perceptions.

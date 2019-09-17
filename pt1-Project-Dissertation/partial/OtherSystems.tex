@@ -1,0 +1,70 @@
+\subsection*{Other Systems}
+
+
+\subsubsection*{Continuous Interaction within the SAIBA Framework}
+
+
+
+\subsubsection*{Reinforcement Learning with Human Teachers: Evidence of Feedback and Guidance with Implications for Learning Performance}
+
+%Identified that humans, even when not asked to, provide guidance (and not only feedback) to the developed agent using \ar{RL} learning. For that manner, they adapted the \ac{RL} algorithm and interface to distinguish between guidance and feedback behaviour.
+
+%We study RL because of its popularity as a technique for teaching robots and game characters newskills by giving the human access to the agent’s reward signal: [Integrated learning for interactive synthetic characters, Robotic clicker training. Robotics and Autonomous Systems, A social reinforcement learning agent]
+
+%For instance, active learning or learning with queries is an approach that explicitly acknowledges a hu- man in the loop (Cohn,
+
+%While there are known practical issues with RL (training time re- quirements, representations of state and hidden state, practi- cal and safe exploration strategies),
+
+
+\subsubsection*{Toward a Model for Incremental Grounding in Spoken Dialogue Systems}
+
+Suggests an incremental grounding model as part of a virtual human spoken dialogue system. The motivation is that incremental language systems are more flexible and natural because they can provide mechanisms for adapting quickly. This mechanism is relevant in turn-taking strategies that are still very rigid in which overlapping speech is not supported. 
+
+% These overlapping responses are important for efficient conversation, and emphasize the incremental nature of human-human communication [2, 3].
+
+%Tradtiional sytems employ a rigir turn taking model, in which overlapping speech is not supported. but [4-7] started some of these incremental processing and response capabilities, including user preference over non-incermental systems and incerses in perceived human-linkess and efficiency [8-9] and even fluency of user speech [10].
+
+[8] is capable of incermental grounding behavior, but was pointed [12], the domain lacks a notion of utterances and a meaning beyond the surface text. The ground model should include the intention and conversational meaning of utterances
+
+Describe implentation of this model in a virtual human dialogue system that can provide backchannel behvaciours and low latency responses.
+
+effective and fluent conversation requires joint effort from both interlocuturs and this effort is manifested in real time as the speech is happening. There is feedback loop between both interlocutors, sometimes these feeddback overlabps the speakiers ongoing utterance and can be accompanied of 
+
+For a spoken dialogue system to understand and generate such behaviours, it needs to process speech incrementally. For that manner, the system needs understand the user input and plan system responses frequenty, not only while the user is epasking but also while the user listens.
+
+\subsubsection*{An Architecture for Fluid Real-time Conversational Agents:
+Integrating Incremental Output Generation and Input Processing}
+
+Big culprits : Big latency and inflexible handling of the interaction.
+
+Kopp et al. proposes an architectureal framework fir cinversational agents that focus on fluid real-time conversations.
+
+Emobded COnversational agents (ECAs) aim to enable human-like face-to-fce intereaciton between a human user and an artificial agent. Cassel and collegagues [6] define them to :
+\begin{itemize}
+	\item recogniza and respond to verbal and non-verbal input;
+	\item generate verbal and non-verbal output
+	\item deal with conversational functions such as turntaling, feedback and mechimsmos
+	\item contribute signals that indicate the state of the conversation or contribute new propositions to the discoursez
+\end{itemize}
+
+Most ECA still are characterizer by  noticible latencies and slow response times, resulting in a unnatural clumsiness. I.e., fall short on fluidify and smoothness in natural human conversrational interaction.
+
+%Depending on this instant feedback, speakers can re-plan the remaining part(s) of their communicative plan, adapt it to the addressees’ needs, put it on hold, insert a sub-dialogue, and continue at the point of interruption. All this is done in such an effortless, smoothly coordinated and seemingly natural way that it is not even apparent that difficulties were payed attention to or that plans were changed midway. That is, acting in a conversation can only partially be based on extensive planning ahead and deep representational model.
+
+People are highly senstive to the partner's verbal and non-verbal feedback and are able to alter their tterances in progress accordingly [7]
+
+Suggest to improve current art: close bi-directional coordination between input processing and output generation and incermentality of processing at both states.
+
+Propose a architectural framwork named ASAP (Artificial Social Agent Plaaform), which is a dedicated ECA middleware for real-time conversational settings.
+
+Extends the BLM/FML output genreation framework [23, 48] and goes beyon, on the one hand, techincal software archtiectures for multi-component ECA system (e.g. Virtual Human toolkit [15]).
+
+Fluid conversations hinges upon fast adaptation nad coordination taking place between interlocutors.
+
+Interlocutors coordinate their behavior at a very fine grained levels to collaborativelty mange their interaction. THe interlocutos send mutual signals, they monitor and aadapt their utterances  flexibly and rapidly to satisfy the conversational needs. These adaptations are in form of changing lexical choices, slowing speech rate, make pause or even change the entire idea (disfluencies).
+
+Requires: 
+- Incremental processing
+- bi-directional, multi-level interaction between input processing and output generation.
+
+

@@ -1,0 +1,35 @@
+% This is "Introduction.tex"
+
+\begin{figure*}
+	\centering
+	%\begin{framed}
+		\scalebox{0.85}{
+            \begin{forest}
+                [\textbf{Build Rapport}
+                    [Stimulate Positivity 
+                        [Self-disclosure][Motivate][Humor]]
+                    [Stimulate Mutual Attention
+                        [Mutual Gaze][Backchannel]]
+                    [Stimulate Coordination
+                        [Behavioural Mimicry
+                            [Facial Expressions][Head Gestures]]
+                        [Adhere To Social Norms]
+                        [Backchannel]]
+                ]               
+            \end{forest}
+        }
+	%\end{framed}
+	\caption{Example of a goal tree to build rapport. The nodes are goals and the leafs are actions.}
+	\label{table:BuildingRapportPlan}
+\end{figure*}
+
+\section{Introduction}
+\label{sec:Introduction}
+
+Robots are increasingly becoming part of our society and their presence has been proven to impact our lives. But do any of us remember a remarkable interaction with a robot to the same degree we are able to recall one with a person? What makes one conversation memorable? 
+
+In order to answer these questions, researchers have been exploring agents capable of building rapport, i.e., designing agents that consider the following aspects during interactions: positivity, mutual attention, and coordination~\cite{Spencer-Oatey2005}. In reality, most of the today's agents do not consider formally this concept, and yet they have been impacting people's lives on several scenarios such as education~\cite{Burroughs2007}, child care~\cite{Burns1984} and medical assistance~\cite{Kang2005, Lisetti2013}. Researchers have been mostly considering single aspects of rapport such as gaze~\cite{Andrist2015, Mutlu2006, Stanton2014, Andrist2014, Baxter2014, Wang2010} and backchannel~\cite{Truong2011, Huang2010, Poppe2011, Poppe2010, Kok2012, Niewiadomski2009} (listener behaviour), which is not enough, as rapport is managed more efficiently when considering its three components. More importantly, we only found virtual agent capable of managing these three components~\cite{Buschmeier2011, Gratch2006}. 
+
+This work tackles the lack of robotic agents capable of building rapport using its three components. For this purpose, we designed and implemented a rapport model (Sections~\ref{sub:rapportModel} and ~\ref{sec:model_implementation}, respectively) on robot \ac{EMYS} using the \ac{SERA} ecosystem~\cite{Tullio2015}. The designed rapport model enables concurrent execution of rapport behaviours using a prioritisation mechanism where idle actions (e.g., postural mimicry) have lower priorities than behaviours triggered momentarily (e.g., surprise animations). These strategies may be either rule-based or \ac{ML}-based but they all cooperate to achieve the interactional goals of the scenario.
+
+To analyse the performance of the developed rapport strategies, we conducted user studies to study its impact on likeability, intelligence and liveness using Godspeed questionnaires~\cite{bartneck2009measurement, lehmann2015good}, and proximity~\cite{aron1992inclusion} using the Quick Numbers scenario detailed in Section~\ref{sec:studies}.

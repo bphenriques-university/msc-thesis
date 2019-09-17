@@ -1,0 +1,29 @@
+\subsection{Facial Expression Mimicry}
+\label{sub:sec:FacialExpressionMimicry}
+
+The Facial Expression Mimicry rapport \textit{Effector} mimics the user's emotion given the perceptual information returned from SHORE (the source code is available in listing~\ref{lst:facialExpressionsSourceCode} in Appendix C). The \textit{Effector}'s parameters (Table~\ref{table:facialMimicryParameters}) were attributed empirically following several pilots that were run with 3 different people until a balance was found between overeagerness and lack of liveness (Table~\ref{table:facialMimicryParametersValues}). In particular, the probability and the minimum delay specified in Table~\ref{table:facialMimicryParametersValues} were crucial to avoid triggering animations one, after another, for the duration of the emotion. In addition, the final \textit{Nutty Tracks} animation identifier is the base identifier followed by a random number between 1 and 5, for example, \textit{sadness1}, \textit{joy4}, and \textit{surprise3}. With this randomisation, the agent will not be as repetitive which may impact negatively the user's opinion of it. %Lastly, Anger is not specified as SHORE often mistakes it for happiness.
+
+Nonetheless, the implementation of this plugin is not without issues as:
+\begin{itemize}
+    \item In absence of faces, SHORE outputs happiness emotions with a high level of intensity ($>$ 75);
+    \item There is a slight noticeable delay (less than 1 second) between the emotion appearing on the video feed and being transmitted to GRETA;
+    \item Camera distance and light conditions have the greatest impact on accuracy.
+\end{itemize}
+
+The issues lied on a balance between accuracy and speed. Applying a smoothing filter solved the second issue by reducing the signal spikes but it increased the delay from at most 1 second to 3 seconds. In the end, we opted to remove the smoothing filter, compensating with enabling/disabling this plugin only when required in runtime (Section~\ref{sub:sec:effectorPlugin}). Finally, the last issue is easily solved by taking the lightning conditions into consideration when preparing the physical space.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Parameter}} & \textbf{Happiness} & \textbf{Sadness} & \textbf{Surprise} \\ \hline
+		Priority & 1 & 1 & 1 \\ \hline
+		Minimum Intensity & 0.65 & 0.65 & 0.5 \\ \hline
+		Trigger Probability & 0.48 & 0.48 & 0.48 \\ \thickhline
+		\textit{Nutty Tracks} Base Animation & joy & sadness & surprise \\ \hline
+		Minimum delay between mimicry behaviours (ms) & 3500 & 3500 & 3500 \\ \hline	
+	\end{tabular}
+	\caption{Parametrisation of the Facial Expression Mimicry rapport \textit{Effector}. }
+	\label{table:facialMimicryParametersValues}
+\end{table}
+

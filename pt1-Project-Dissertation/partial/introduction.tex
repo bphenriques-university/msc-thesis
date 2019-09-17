@@ -1,0 +1,60 @@
+%Humor -> Treger2013
+%(e.g. facial expression mirroring \cite{Dimberg2000, Hess1999})
+%%%%Baxter2014%%%%%%%%%%%%%%%%%%%%%%%%%%
+%objective characterisation of the gaze behaviour of the human towards the robot during an interaction, and explore how this analysis can shape the assessment of the human’s behaviour, and the state of the interaction itself.
+
+%human gaze behaviour over the course of an interaction can provide useful information regarding the state of the interaction, and also the attitude of the human towards the robot.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Moreover, the personality of the listener's can impact negatively the results because, as described, after several iterations the model converge to the average speaker and listener \cite{Kok2012}.
+
+% assess... denote... usefulness... applicability of the the prposed methodonlogy, bears, beforehand, thus..., In that respect, ... accusttomed... as illustrated in FIg X., As discussed in Sec. ... endeavor
+
+
+%NORMALIZAR TUDO PARA limited-perception WoZ
+
+
+\section{Introduction}
+\label{sec:Introduction}
+Robots are increasingly becoming part of our society and their presence has been proven to impact our lives. But do any of us remember a remarkable interaction with a robot to the same degree we are able to recall one with a person? What makes one conversation memorable? People can do this so easily and establish rapport rapidly. How can we design robots that can achieve something that has so much impact?
+
+In order to answer these questions, the \ac{HRI} research community has been exploring agents capable of responding emotionally and more humanly in dyadic interactions. More specifically, researchers have been exploring how to exhibit signs of friendliness, coordination, and attentiveness in dyadic interactions. In other words, researchers have been studying how to develop rapport agents. These agents are being applied in several domains such as education~\cite{Burroughs2007}, autism~\cite{Feil-Seifer2009, Scassellati2012}, child care~\cite{Burns1984}, medical assistances~\cite{Kang2005, Lisetti2013}, family companions~\cite{Bickmore2005}, weight loss~\cite{Fasola2012}, and several other examples~\cite{Marti2006, Nadler2003}.
+
+In order to improve the agents' performance, several studies were conducted to identify how to influence people using different verbal and non-verbal strategies. There is evidence in these studies that rapport agents can make people feel: more connected~\cite{Rosenthal-vonderPutten2013, Tsai2012}, less tense~\cite{Wang2010}, less embarrassed~\cite{Kang2009}, and more capable of trusting~\cite{Kang2009}. However, the impact depends on how such strategies are executed. For example, a poorly timed head nod, a backchannel to generate coordination and attentiveness, may reduce rapport.
+
+Despite present efforts regarding rapport, there are still important issues that can be further improved and the proposal intends to address, namely:
+\begin{enumerate}[label=(\roman*)]
+	\item Lack of studies on how backchannels \ac{ML} based prediction models benefit from \ac{WoZ} studies;
+	\item Methods to train virtual agents to simulate subconscious human behaviour;
+	\item Lack of robotic rapport agents that is capable of eliciting every component of rapport: positivity, coordination and mutual attention.
+\end{enumerate}
+
+We propose extending the \ac{SERA}\cite{Tullio2015} framework to manage rapport in dyadic settings because it is integrated into several robotic agents, and because it is being developed internally in \ac{GAIPS}. The proposed solution will use a hybrid architecture with one rule-based component to model high-level interactional rules that are easy to specify, and two \ac{ML} based components to model appropriate timings and actions for backchannels, respectively. Following current literature, we will use \ac{RL}~\cite{Thomaz2006, Kok2012, Zhao2014, Papangelis2014, Blumberg2002, Andrist2015, Mutlu2006} (Section~\ref{subsec:ReinforcementLearning}).
+
+The \ac{ML}-based components will be trained using a novel approach to learn subconscious human behaviours based on a modified limited perception \ac{WoZ}~\cite{Sequeira2016, Knox2014} with human experts providing corrective feedback.
+
+To evaluate the proposed solution, a rapport agent will be developed, trained and tested on a dyadic negotiation game setting based on the Split Or Steal game using robot \ac{EMYS}. We expect the developed system to stimulate the essential components of rapport: positivity through the rule-based component, and attentiveness and coordination through the previous learnt \ac{ML} models. The evaluation will measure the effectiveness of the proposed approach on learning subconscious behaviour, the quality of the rapport agent, and the impact of rapport on cooperation in the proposed negotiation scenario.
+
+\subsection{Objectives and Expected Contributions}
+\label{subsec:Objectives}
+
+The main goal is to improve current predictive models for backchannels (which are essential to build rapport agents) to be used on robots with inherent limitations over the environment, regarding its perceptions and actions. To solve this issue, we propose to:
+
+\begin{enumerate}[label=(\roman*)]
+	\item Extend the \ac{SERA} framework to support rapport management using a hybrid controller with a rule-based component, and two \ac{ML}-based components trained with the proposed approach;
+	\item Create a rule-based component for managing rapport which will be the baseline for training and evaluation;
+	\item Train a \ac{ML} classifier to assess socially adequate timings for backchannel generation;
+	\item Train a \ac{ML} classifier to determine the most appropriate backchannel during interactions;
+	\item Integrate the rapport agent on a negotiation scenario, Split Or Steal game;
+	\item Conduct a study to compare the final rapport agent with the baseline.
+\end{enumerate}
+
+Lastly, the expected contributions of this proposal are:
+\begin{enumerate}[label=(\roman*)]
+	\item A novel approach to learn subconscious information from human subjects based on a limited-perception \ac{WoZ}~\cite{Sequeira2016};
+	\item Studies over the impact of our proposed approach over training backchannels predictive models;
+	\item Improvement over previous rapport agents regarding their quality and naturalness;
+	\item Extension of \ac{SERA} framework to support rapport management in dyadic interactions.
+\end{enumerate}
+
+The remainder of the document is organised as follows. Section \ref{sec:Background} describes rapport, \acl{ML}, and \acl{RL}. Section \ref{sec:StateOfTheArt} describes the current state-of-art in rapport agents. Sections \ref{sec:Solution} and \ref{sec:Evaluation}, describe, respectively, the proposed solution and the implementation and methodology for evaluation. Lastly, the conclusions and the planning will be addressed in Section~\ref{sec:Conclusion}.

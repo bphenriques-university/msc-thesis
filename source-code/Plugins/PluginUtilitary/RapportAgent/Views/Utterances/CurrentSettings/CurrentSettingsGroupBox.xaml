@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="RapportAgentPlugin.Views.Utterances.Elements.CurrentSettingsGroupBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RapportAgentPlugin.Views.Utterances.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RapportAgentPlugin;component/Views/SharedResources/Icons.xaml"/>
+                <ResourceDictionary Source="/RapportAgentPlugin;component/Views/SharedResources/Other.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <GroupBox Header="Current Settings" Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Utterances Folder: " />
+            <TextBox Grid.Column="1" IsEnabled="False" Text="{Binding UtterancesManager.FileListManager.UtterancesSourceFolderPath}" VerticalContentAlignment="Center" />
+
+            <Button Grid.Column="2" Click="ChangeFolder_Click" Margin="5,0,2,0">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="16" Height="16" Fill="{StaticResource FolderIcon}"/>
+                    <TextBlock Margin="5,0,3,0" Text="Browse"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </GroupBox>
+</UserControl>

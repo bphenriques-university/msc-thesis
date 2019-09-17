@@ -1,0 +1,71 @@
+\usepackage[english, USenglish, american]{babel}
+\usepackage{ucs}
+\usepackage{forest} % for diagrams
+\usepackage{tikz-qtree} % for digramas
+\usepackage{framed}
+\usepackage[utf8x]{inputenc} 							% Encoding (allows accents)
+\usepackage[printonlyused,nolist]{acronym}	% Acronyms (print only used)
+\usepackage{cite}% Allow multiple citations, etc.
+\usepackage{indentfirst} 								% Allow indent on first paragraph
+% \usepackage[pdftex]{graphicx}
+\usepackage{graphicx} 									% Pictures
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}									% Maths
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{tabularx} %useful in equations
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[raggedright]{sidecap} % for side captions
+\usepackage{multirow}
+\usepackage{hyphenat}
+\usepackage[export]{adjustbox}
+\usepackage{alltt}
+\usepackage{booktabs}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage[hyphens]{url}
+\usepackage{pdflscape}									% Allow horizontal pages (in the pdf too)
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{color}
+\usepackage[left]{lineno}
+\usepackage[textwidth=2.8cm,disable]{todonotes}
+\setcounter{tocdepth}{3}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\setlength{\parindent}{0.5cm}
+\setcounter{secnumdepth}{3}
+\selectlanguage{USenglish}
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip\noindent \textbf{Keywords:} \enspace\ignorespaces#1}
+
+\usepackage{caption} 
+\usepackage{enumitem}
+\captionsetup[table]{skip=5pt}
+\usepackage{listings} 									% Source code blocks
+\usepackage[toc,page]{appendix}							% Appendix
+\usepackage{qtree}
+\usepackage{wrapfig}
+\usepackage{newfloat}
+\renewcommand{\arraystretch}{1.2} % increase space in tables
+\setlength{\tabcolsep}{.25em} % increase horizontal space in tables
+
+
+%reduce space between the figure and remaining text
+\setlength{\textfloatsep}{1\baselineskip plus 0.2\baselineskip minus 0.5\baselineskip}
+
+
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+% Rotation: \rot[<angle>][<width>]{<stuff>}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+

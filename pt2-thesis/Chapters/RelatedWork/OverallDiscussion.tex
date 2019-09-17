@@ -1,0 +1,71 @@
+\section{Overall Discussion}
+\label{subsec:RelWorkDiscussion}
+
+Developing computational models capable of managing rapport with the same complexity and ease as people is a tremendous feat. In an attempt to improve current models, researchers have been focused on either, building complex systems that enhance one of the components of rapport (e.g., gaze or backchannel), either building complex systems that take into account all its components, but on a smaller scale. Table~\ref{fig:comparison:rapportSystems} respectively, compares the systems regarding how they learn social behaviours, and how they attempt to build rapport with users.
+
+Current literature suggests continuing the research on learning social behaviours from \ac{WoZ}~\cite{Sequeira2016, Knox2014, Papangelis2014} studies and use \ac{ML}~\cite{Thomaz2006, Kok2012, Zhao2014, Papangelis2014} classifiers. In addition, authors suggest developing solutions capable of adapting current course of actions to the current context of the interaction to improve the quality of virtual agents during interactions~\cite{Kopp2007, Zwiers2011, Reidsma2011, Visser2014}.
+
+Most of all, the communication goals of interactions must be considered when developing rapport agents. The context in which the communication partners will interact, the inherent limitations of the virtual agents' perceptions and actions and, most importantly, what kind of emotions and actions we want to elicit from the conversational partner are crucial for the development of such agents. For example, in tutoring applications, mutual gaze plays an important role for increased learning performance \cite{OTTESON1980, SHERWOOD1987, Fry1975}, and in negotiation scenarios not reciprocating negative self-disclosure has been shown to destroy rapport\cite{Bronstein2012}.
+
+\addtolength{\tabcolsep}{1pt}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lccccccccccc}
+		& \textbf{Type}
+		& \textbf{Agent} 
+	  	& \rot[70]{\textbf{Gaze}}
+	  	& \rot[70]{\textbf{Backchannel}} 
+	  	& \rot[70]{\textbf{Small-Talk}} 
+	  	& \rot[70]{\textbf{Facial Expressions}}
+	  	& \rot[70]{\textbf{Gestures}} 
+	  	& \rot[70]{\textbf{Mirroring}} 
+	  	& \rot[70]{\textbf{Smile}}
+	  	& \rot[70]{\textbf{Turn-Taking}}
+	  	& \rot[70]{\textbf{Praise}}
+	  	\\
+	  	\midrule
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Mutlu et al.~\cite{Mutlu2006} & Rule-based & Robotic & \cmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark\\
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Stanton et al.~\cite{Stanton2014} & Rule-based & Robotic & \cmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark\\
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Andrist et al.~\cite{Andrist2015} & Rule-based  & Robotic & \cmark & \xmark & \xmark & \xmark & \cmark & \xmark & \xmark & \xmark & \cmark\\
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Laurel D. Riek et al.~\cite{Riek2009} & Rule-based & Robotic & \xmark & \xmark & \xmark & \xmark & \cmark & \cmark & \xmark & \xmark & \xmark\\	
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Mohammad et al.~\cite{Mohammad2010} & \ac{ML}-based  & Robotic & \textbf{?} & \cmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark \\ 
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Huang et al.~\cite{Buschmeier2011} & \ac{ML}-based & Virtual & \xmark & \cmark & \cmark & \cmark & \cmark & \cmark & \cmark & \xmark & \xmark\\
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Kok et al.~\cite{Kok2012} & \ac{ML}-based & Virtual &  \xmark & \cmark & \xmark & \xmark & \cmark & \xmark & \xmark & \xmark & \xmark\\
+	  	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  	Schröder et al.~\cite{Schroder2012} & \ac{ML}-based & Virtual & \xmark & \cmark & \xmark & \cmark & \cmark & \xmark & \xmark & \cmark & \xmark\\
+  		\bottomrule
+	\end{tabular}
+	\caption{Brief comparison regarding how different virtual agents manage strategies. \protect\cmark, \protect\xmark \, and \textbf{?}, represents whether the specified strategy is applied, not applied or unclear, respectively.}
+	\label{fig:comparison:rapportSystems}
+	
+\end{table}
+\addtolength{\tabcolsep}{-1pt}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{System}              	& \textbf{Training Source} 	& \textbf{Iterative} \\ \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		Mohammad et al.~\cite{Mohammad2010} & Direct Samples (Unsupervised) & Yes \\ \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		Virtual Rapport 2.0~\cite{Buschmeier2011} 			& Corpus			& No \\ \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\acf{IPL}~\cite{Kok2012}          				& Corpus \& Subjective evaluation			& Yes \\ \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\acf{SAL}~\cite{Schroder2012} & Corpus \& \ac{WoZ}		& Yes \\ \hline
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		Restricted Perception~\acf{WoZ}~\cite{Sequeira2016}  & \ac{WoZ}		& Yes \\ \hline
+		
+	\end{tabular}
+	\caption{Brief comparison of methodologies to learn human social behaviours.}
+	\label{fig:comparison:vh:systems}
+\end{table}
+

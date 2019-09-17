@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<MimicHeadSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DebugMessages>false</DebugMessages>
+  <MinimumDelayMsBetweenActions>2500</MinimumDelayMsBetweenActions>
+  <Shake>
+    <Priority>1</Priority>
+    <MinimumIntensity>30</MinimumIntensity>
+    <MaximumIntensity>100</MaximumIntensity>
+    <MinimumRepetitions>2</MinimumRepetitions>
+    <MaximumRepetitions>2</MaximumRepetitions>
+    <MinimumFrequency>150</MinimumFrequency>
+    <MaximumFrequency>200</MaximumFrequency>
+    <TriggerProbability>1</TriggerProbability>
+    <TimeOutMs>3500</TimeOutMs>
+    <IsNodBehaviour>false</IsNodBehaviour>
+  </Shake>
+  <Nod>
+    <Priority>1</Priority>
+    <MinimumIntensity>5</MinimumIntensity>
+    <MaximumIntensity>10</MaximumIntensity>
+    <MinimumRepetitions>2</MinimumRepetitions>
+    <MaximumRepetitions>2</MaximumRepetitions>
+    <MinimumFrequency>125</MinimumFrequency>
+    <MaximumFrequency>160</MaximumFrequency>
+    <TriggerProbability>1</TriggerProbability>
+    <TimeOutMs>3500</TimeOutMs>
+    <IsNodBehaviour>true</IsNodBehaviour>
+  </Nod>
+</MimicHeadSettings>

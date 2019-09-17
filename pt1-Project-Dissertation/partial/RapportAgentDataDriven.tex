@@ -1,0 +1,16 @@
+\subsection{Creating Rapport Agent using Data-Driven Based Approaches}
+\label{sub:sec:datadrivenbasedAgents}
+
+Rule-based systems are not easily scalable seeing that it is impossible to program an agent to handle every possible situation and outcome, especially when interacting with the unpredictability of human behaviour. Therefore, some scenarios may benefit of having agents capable of adapting to changes in the external world and act accordingly using data-driven models. We consider data-driven systems, or \ac{ML}-based systems, as systems that use data collected from studies to train \ac{ML} classifiers and generate appropriate social behaviours.
+
+Mohammad et al., propose a model for interactive robots that can learn how to interact naturally with human conversational partners in different environments and contexts~\cite{Mohammad2010} using unsupervised learning. One of the tested successful scenarios was learning how to apply backchannels in a dyadic setting with a human instructor. According to their results, as expected, the system performs better than the traditional rule-based, however, there is no comparison regarding the traditional supervised learning approaches.
+
+Cakmak, Thomaz and colleagues have been researching the potential of active learning on agents that actively seek information and fill gaps in their knowledge, potentially improving their performance~\cite{Chao2010, Cakmak2010, Cakmak2012, Thomaz2006}. In their studies, they noticed that people who better understand the agent's queries are able to train the model with ``perfect accuracy relatively quickly'' and had more confidence on the trained model performance~\cite{Chao2010}. However, previous work has been more focused on learning task related information and not, as intended in the present document, learning better interactional models to build and maintain rapport.
+
+Current literature on rapport and virtual agents, uses \ac{CRF}~\cite{Buschmeier2011}, \ac{SVM}~\cite{Kok2012}, and \ac{RL}~\cite{Thomaz2006} as classifiers. However every author suggests exploring \ac{RL} algorithms, such as Q-learning (detailed in Section~\ref{subsec:ReinforcementLearning}) to learn human social behaviours~\cite{Thomaz2006, Kok2012, Zhao2014, Papangelis2014, Blumberg2002, Andrist2015}. 
+
+Moreover, it is important to properly design the experiments to correctly collect data. For example, Thomaz et al., developed an agent using \ac{RL} learning \cite{Thomaz2006}. During the experiment, despite asking the humans not to provide feedback (only guidance), they influenced the results. As the author describes ``people use the reward signal to give anticipatory rewards, or future directed guidance for the agent''.
+
+\input{partial/VirtualRapport2}
+\input{partial/IterativePerceptualLearning}
+\input{partial/partial/AutonomousSensitiveArtificialListeners}

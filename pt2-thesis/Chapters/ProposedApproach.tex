@@ -1,0 +1,40 @@
+\fancychapter{Implementation of a Rapport Agent}
+\label{chap:proposedapproach}
+
+The following sections describe the implementation of the rapport model, as well as the framework that eases the development of rapport agents by both technical and non-technical researchers. The framework is built on top of the \ac{SERA} ecosystem as it provides most of the tools to translate high-level intentions into actions that can be executed by either virtual or robotic agents such \ac{EMYS} (Figure~\ref{fig:robots:EMYS2}) and NAO (Figure~\ref{fig:robots:NAO2}). The latter robot is the chosen embodiment to test the developed rapport agent.
+
+Following this, the framework has the following goals:
+\begin{enumerate}
+	\item Implement the rapport model described in Chapter~\ref{chap:rapportModel};
+	\item Promote re-usage of interaction strategies among different agents and \ac{HRI} scenarios;
+	\item Provide non-technical researchers with the tools to customise the agent's behaviour;
+	\item Provide technical researchers with the tools to develop additional rapport strategies without hindering the performance of the existing ones;	
+	\item Maintain compatibility with current agents developed using the \ac{SERA} ecosystem.
+\end{enumerate}
+
+%TODO verificar following... depiction
+
+\begin{figure}[ht]
+	\centering
+	\begin{minipage}[b]{.4\textwidth}
+		\centering
+		\frame{\includegraphics[width=0.4\textwidth]{images/emys.png}}
+		\caption{\ac{EMYS} robot.}
+		\label{fig:robots:EMYS2}
+	\end{minipage}
+%	\hfill
+	\begin{minipage}[b]{.4\textwidth}
+		\centering
+		\frame{\includegraphics[width=0.55\textwidth]{images/NAO_Robot.JPG}}
+		\caption{NAO robot.}
+		\label{fig:robots:NAO2}
+	\end{minipage}
+\end{figure}
+
+
+
+\input{Chapters/Architecture/IntegrationSERA}
+\input{Chapters/Architecture/Overview}
+\input{Chapters/Architecture/RapportController}
+\input{Chapters/Architecture/Plugins}
+\input{Chapters/Architecture/DevelopedStrategies}
